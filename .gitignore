@@ -1,0 +1,5 @@
+# Ignore object files generated from
+# compilation and linking
+*.o
+# Ignore bin/ directory
+bin/
