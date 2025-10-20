@@ -1,0 +1,2 @@
+# Ignore `__pycache__/' directory tree anywhere in the repository
+**/__pycache__/
