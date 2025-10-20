@@ -1,0 +1,1 @@
+My one or more attempts at [Java](https://dev.java) programming language content on [Medium](https://medium.com)
