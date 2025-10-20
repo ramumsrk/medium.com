@@ -1,0 +1,2 @@
+# Ignore contents of `out/' directory tree anywhere in the repository
+**/out/
