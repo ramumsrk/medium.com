@@ -1,0 +1,47 @@
+Transaction ID : 95
+Begin time     : 2025-10-21 06:03:01
+Begin rpmdb    : 74d48f177bb70710de2c482d1da44f502a668d18a0d22ba16d40501287e19195
+End time       : 2025-10-21 06:04:16
+End rpmdb      : ebd80387ec64ee245b166380660aa57f24da2f7cedf694a8b93775a6b2934d1b
+User           : 1000 Ramu Mohan Srinivasan RadhaKrishnan <ramumsrk>
+Status         : Ok
+Releasever     : 42
+Description    : dnf5 --noplugins --forcearch x86_64 --repo pgdg18 --repo fedora --repo updates install --assumeyes postgresql18 postgresql18-contrib postgresql18-devel postgresql18-plperl postgresql18-plpython3 postgresql18-server postgresql18-test
+Comment        : 
+Packages altered:
+  Action  Package                                        Reason     Repository
+  Install postgresql18-0:18.0-1PGDG.f42.x86_64           User       pgdg18
+  Install postgresql18-contrib-0:18.0-1PGDG.f42.x86_64   User       pgdg18
+  Install postgresql18-devel-0:18.0-1PGDG.f42.x86_64     User       pgdg18
+  Install postgresql18-plperl-0:18.0-1PGDG.f42.x86_64    User       pgdg18
+  Install postgresql18-plpython3-0:18.0-1PGDG.f42.x86_64 User       pgdg18
+  Install postgresql18-server-0:18.0-1PGDG.f42.x86_64    User       pgdg18
+  Install postgresql18-test-0:18.0-1PGDG.f42.x86_64      User       pgdg18
+  Install postgresql18-libs-0:18.0-1PGDG.f42.x86_64      Dependency pgdg18
+  Install perl-IPC-Run-0:20231003.0-5.fc42.noarch        Dependency fedora
+  Install perl-IO-Tty-0:1.20-6.fc42.x86_64               Dependency fedora
+  Install clang-devel-0:20.1.8-4.fc42.x86_64             Dependency updates
+  Install clang-tools-extra-0:20.1.8-4.fc42.x86_64       Dependency updates
+  Install llvm-devel-0:20.1.8-4.fc42.x86_64              Dependency updates
+  Install llvm-0:20.1.8-4.fc42.x86_64                    Dependency updates
+  Install llvm-googletest-0:20.1.8-4.fc42.x86_64         Dependency updates
+  Install llvm-static-0:20.1.8-4.fc42.x86_64             Dependency updates
+  Install llvm-test-0:20.1.8-4.fc42.x86_64               Dependency updates
+  Install libicu-devel-0:76.1-4.fc42.x86_64              Dependency fedora
+  Install libedit-devel-0:3.1-55.20250104cvs.fc42.x86_64 Dependency fedora
+  Install ncurses-devel-0:6.5-5.20250125.fc42.x86_64     Dependency fedora
+  Install ncurses-c++-libs-0:6.5-5.20250125.fc42.x86_64  Dependency fedora
+
+Transaction ID : 94
+Begin time     : 2025-10-21 05:51:01
+Begin rpmdb    : ad5a429c04eab75b21a9a67d12d6ab1913785f070ae76c0481fd6dfef9b990f6
+End time       : 2025-10-21 05:51:09
+End rpmdb      : b590827f4989c0b08da8c74009c9171e023b730db895f98cd7187f6cc5fae967
+User           : 1000 Ramu Mohan Srinivasan RadhaKrishnan <ramumsrk>
+Status         : Ok
+Releasever     : 42
+Description    : dnf5 --noplugins install --assumeyes https://download.postgresql.org/pub/repos/yum/reporpms/F-42-x86_64/pgdg-fedora-repo-latest.noarch.rpm
+Comment        : 
+Packages altered:
+  Action  Package                               Reason Repository
+  Install pgdg-fedora-repo-0:42.0-43PGDG.noarch User   @commandline
