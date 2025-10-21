@@ -1,0 +1,1 @@
+[My](https://medium.com/@ramumsrk/) one or more attempts at [PostgreSQL](https://www.postgresql.org) database stories on [Medium](https://medium.com)
