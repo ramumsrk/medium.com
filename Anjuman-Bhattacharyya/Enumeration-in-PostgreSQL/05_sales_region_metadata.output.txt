@@ -1,0 +1,186 @@
+-[ RECORD 1 ]--+-------------
+oid            | 16422
+typname        | sales_region
+typnamespace   | 16412
+typowner       | 16387
+typlen         | 4
+typbyval       | t
+typtype        | e
+typcategory    | E
+typispreferred | f
+typisdefined   | t
+typdelim       | ,
+typrelid       | 0
+typsubscript   | -
+typelem        | 0
+typarray       | 16421
+typinput       | enum_in
+typoutput      | enum_out
+typreceive     | enum_recv
+typsend        | enum_send
+typmodin       | -
+typmodout      | -
+typanalyze     | -
+typalign       | i
+typstorage     | p
+typnotnull     | f
+typbasetype    | 0
+typtypmod      | -1
+typndims       | 0
+typcollation   | 0
+typdefaultbin  | 
+typdefault     | 
+typacl         | 
+oid            | 16432
+enumtypid      | 16422
+enumsortorder  | 5
+enumlabel      | WEST
+-[ RECORD 2 ]--+-------------
+oid            | 16422
+typname        | sales_region
+typnamespace   | 16412
+typowner       | 16387
+typlen         | 4
+typbyval       | t
+typtype        | e
+typcategory    | E
+typispreferred | f
+typisdefined   | t
+typdelim       | ,
+typrelid       | 0
+typsubscript   | -
+typelem        | 0
+typarray       | 16421
+typinput       | enum_in
+typoutput      | enum_out
+typreceive     | enum_recv
+typsend        | enum_send
+typmodin       | -
+typmodout      | -
+typanalyze     | -
+typalign       | i
+typstorage     | p
+typnotnull     | f
+typbasetype    | 0
+typtypmod      | -1
+typndims       | 0
+typcollation   | 0
+typdefaultbin  | 
+typdefault     | 
+typacl         | 
+oid            | 16430
+enumtypid      | 16422
+enumsortorder  | 4
+enumlabel      | EAST
+-[ RECORD 3 ]--+-------------
+oid            | 16422
+typname        | sales_region
+typnamespace   | 16412
+typowner       | 16387
+typlen         | 4
+typbyval       | t
+typtype        | e
+typcategory    | E
+typispreferred | f
+typisdefined   | t
+typdelim       | ,
+typrelid       | 0
+typsubscript   | -
+typelem        | 0
+typarray       | 16421
+typinput       | enum_in
+typoutput      | enum_out
+typreceive     | enum_recv
+typsend        | enum_send
+typmodin       | -
+typmodout      | -
+typanalyze     | -
+typalign       | i
+typstorage     | p
+typnotnull     | f
+typbasetype    | 0
+typtypmod      | -1
+typndims       | 0
+typcollation   | 0
+typdefaultbin  | 
+typdefault     | 
+typacl         | 
+oid            | 16428
+enumtypid      | 16422
+enumsortorder  | 3
+enumlabel      | SOUTH
+-[ RECORD 4 ]--+-------------
+oid            | 16422
+typname        | sales_region
+typnamespace   | 16412
+typowner       | 16387
+typlen         | 4
+typbyval       | t
+typtype        | e
+typcategory    | E
+typispreferred | f
+typisdefined   | t
+typdelim       | ,
+typrelid       | 0
+typsubscript   | -
+typelem        | 0
+typarray       | 16421
+typinput       | enum_in
+typoutput      | enum_out
+typreceive     | enum_recv
+typsend        | enum_send
+typmodin       | -
+typmodout      | -
+typanalyze     | -
+typalign       | i
+typstorage     | p
+typnotnull     | f
+typbasetype    | 0
+typtypmod      | -1
+typndims       | 0
+typcollation   | 0
+typdefaultbin  | 
+typdefault     | 
+typacl         | 
+oid            | 16426
+enumtypid      | 16422
+enumsortorder  | 2
+enumlabel      | NORTH
+-[ RECORD 5 ]--+-------------
+oid            | 16422
+typname        | sales_region
+typnamespace   | 16412
+typowner       | 16387
+typlen         | 4
+typbyval       | t
+typtype        | e
+typcategory    | E
+typispreferred | f
+typisdefined   | t
+typdelim       | ,
+typrelid       | 0
+typsubscript   | -
+typelem        | 0
+typarray       | 16421
+typinput       | enum_in
+typoutput      | enum_out
+typreceive     | enum_recv
+typsend        | enum_send
+typmodin       | -
+typmodout      | -
+typanalyze     | -
+typalign       | i
+typstorage     | p
+typnotnull     | f
+typbasetype    | 0
+typtypmod      | -1
+typndims       | 0
+typcollation   | 0
+typdefaultbin  | 
+typdefault     | 
+typacl         | 
+oid            | 16424
+enumtypid      | 16422
+enumsortorder  | 1
+enumlabel      | CENTRAL
+

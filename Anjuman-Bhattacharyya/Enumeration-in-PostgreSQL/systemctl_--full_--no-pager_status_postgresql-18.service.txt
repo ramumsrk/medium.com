@@ -1,0 +1,34 @@
+● postgresql-18.service - PostgreSQL 18 database server
+     Loaded: loaded (/usr/lib/systemd/system/postgresql-18.service; disabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Wed 2025-10-22 13:27:33 IST; 25s ago
+ Invocation: 538770ac47a54aeda84113cd28567f71
+       Docs: https://www.postgresql.org/docs/18/static/
+    Process: 5113 ExecStartPre=/usr/pgsql-18/bin/postgresql-18-check-db-dir ${PGDATA} (code=exited, status=0/SUCCESS)
+   Main PID: 5121 (postgres)
+      Tasks: 10 (limit: 16449)
+     Memory: 40M (peak: 40.9M)
+        CPU: 649ms
+     CGroup: /system.slice/postgresql-18.service
+             ├─5121 /usr/pgsql-18/bin/postgres -D /var/lib/pgsql/18/data/
+             ├─5122 "postgres: logger "
+             ├─5123 "postgres: io worker 0"
+             ├─5124 "postgres: io worker 1"
+             ├─5125 "postgres: io worker 2"
+             ├─5126 "postgres: checkpointer "
+             ├─5127 "postgres: background writer "
+             ├─5129 "postgres: walwriter "
+             ├─5130 "postgres: autovacuum launcher "
+             └─5131 "postgres: logical replication launcher "
+
+Oct 22 13:27:32 Fedora-Linux-42-Workstation-KDE-x86-64 (postgres)[5121]: Found cgroup2 on /sys/fs/cgroup/, full unified hierarchy
+Oct 22 13:27:32 Fedora-Linux-42-Workstation-KDE-x86-64 (postgres)[5121]: Found cgroup2 on /sys/fs/cgroup/, full unified hierarchy
+Oct 22 13:27:32 Fedora-Linux-42-Workstation-KDE-x86-64 (postgres)[5121]: postgresql-18.service: Executing: /usr/pgsql-18/bin/postgres -D /var/lib/pgsql/18/data/
+Oct 22 13:27:32 Fedora-Linux-42-Workstation-KDE-x86-64 postgres[5121]: 2025-10-22 13:27:32.944 IST [5121] LOG:  redirecting log output to logging collector process
+Oct 22 13:27:32 Fedora-Linux-42-Workstation-KDE-x86-64 postgres[5121]: 2025-10-22 13:27:32.944 IST [5121] HINT:  Future log output will appear in directory "log".
+Oct 22 13:27:33 Fedora-Linux-42-Workstation-KDE-x86-64 systemd[1]: postgresql-18.service: Got notification message from PID 5121: READY=1
+Oct 22 13:27:33 Fedora-Linux-42-Workstation-KDE-x86-64 systemd[1]: postgresql-18.service: Changed start -> running
+Oct 22 13:27:33 Fedora-Linux-42-Workstation-KDE-x86-64 systemd[1]: postgresql-18.service: Job 10300 postgresql-18.service/start finished, result=done
+Oct 22 13:27:33 Fedora-Linux-42-Workstation-KDE-x86-64 systemd[1]: Started postgresql-18.service - PostgreSQL 18 database server.
+Oct 22 13:27:33 Fedora-Linux-42-Workstation-KDE-x86-64 systemd[1]: postgresql-18.service: Failed to send unit change signal for postgresql-18.service: Connection reset by peer
