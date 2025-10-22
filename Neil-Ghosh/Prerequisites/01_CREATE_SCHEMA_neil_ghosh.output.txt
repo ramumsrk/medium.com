@@ -1,0 +1,8 @@
+CREATE SCHEMA
+CREATE TABLE
+-[ RECORD 1 ]---+---------------------------------
+event_id        | 1
+event_type      | CURRENT
+event_timestamp | 2025-10-22 15:48:03.381993+05:30
+
+INSERT 0 1
