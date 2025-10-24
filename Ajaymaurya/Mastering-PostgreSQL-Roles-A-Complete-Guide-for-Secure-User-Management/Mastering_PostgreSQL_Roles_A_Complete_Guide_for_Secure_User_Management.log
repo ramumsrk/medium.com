@@ -1,0 +1,27 @@
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_roles
+/************************/
+
+           rolname           | rolsuper | rolinherit | rolcreaterole | rolcreatedb | rolcanlogin | rolreplication | rolconnlimit | rolpassword | rolvaliduntil | rolbypassrls | rolconfig |  oid  
+-----------------------------+----------+------------+---------------+-------------+-------------+----------------+--------------+-------------+---------------+--------------+-----------+-------
+ postgres                    | t        | t          | t             | t           | t           | t              |           -1 | ********    | NULL          | t            | NULL      |    10
+ pg_database_owner           | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  6171
+ pg_read_all_data            | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  6181
+ pg_write_all_data           | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  6182
+ pg_monitor                  | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  3373
+ pg_read_all_settings        | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  3374
+ pg_read_all_stats           | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  3375
+ pg_stat_scan_tables         | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  3377
+ pg_read_server_files        | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  4569
+ pg_write_server_files       | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  4570
+ pg_execute_server_program   | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  4571
+ pg_signal_backend           | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  4200
+ pg_checkpoint               | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  4544
+ pg_maintain                 | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  6337
+ pg_use_reserved_connections | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  4550
+ pg_create_subscription      | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  6304
+ pg_signal_autovacuum_worker | f        | t          | f             | f           | f           | f              |           -1 | ********    | NULL          | f            | NULL      |  6392
+ medium_dot_com              | f        | t          | f             | t           | t           | f              |           -1 | ********    | NULL          | f            | NULL      | 16387
+ www_dot_postgresql_dot_org  | f        | t          | f             | t           | t           | f              |           -1 | ********    | NULL          | f            | NULL      | 32811
+(19 rows)
+
