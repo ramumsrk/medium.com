@@ -1,0 +1,1 @@
+# [Autovacuum in PostgreSQL: how we keep our databases in order](https://medium.com/cubbit/autovacuum-in-postgresql-database-472679e678d3)

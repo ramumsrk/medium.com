@@ -11,6 +11,14 @@
 * [New Feature in PostgreSQL 18 : UPDATE and DELETE with Returning Clause](https://anju-writes.medium.com/new-feature-in-postgresql-18-update-and-delete-with-returning-clause-f5289b2829cf)
 * [Enumeration in PostgreSQL](https://anju-writes.medium.com/enumeration-in-postgresql-e22ab9fc7d6d)
 
+# C
+
+## [Cubbit](https://medium.com/cubbit)
+
+### [Marco Ferretti](https://medium.com/@marcodellemarche-cubbit)
+
+* [Autovacuum in PostgreSQL: how we keep our databases in order](https://medium.com/cubbit/autovacuum-in-postgresql-database-472679e678d3)
+
 # D
 
 ## [DevOps.dev](https://blog.devops.dev/)
@@ -48,6 +56,12 @@
 ### [M. Ali Khan](https://medium.com/@muhammadalikhan0003)
 
 * [Unleashing Python Inside PostgreSQL: The Ultimate Guide to PL/Python](https://python.plainenglish.io/unleashing-python-inside-postgresql-the-ultimate-guide-to-pl-python-aa02e876cb6f)
+
+# R
+
+## [Rohan](https://medium.com/@rohansodha10)
+
+* [The Hidden Cost of Long Postgres Transactions (And How to Find Them)](https://medium.com/@rohansodha10/the-hidden-cost-of-long-postgres-transactions-and-how-to-find-them-bff7fe2c2d5c)
 
 # S
 
