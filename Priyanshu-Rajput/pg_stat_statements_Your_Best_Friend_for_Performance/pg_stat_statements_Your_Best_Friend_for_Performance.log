@@ -1,0 +1,518 @@
+/******** QUERY *********/
+SELECT USER, CURRENT_USER, SESSION_USER, CURRENT_SCHEMA, CURRENT_TIMESTAMP, CURRENT_DATE
+/************************/
+
+      user      |  current_user  |  session_user  | current_schema |        current_timestamp         | current_date 
+----------------+----------------+----------------+----------------+----------------------------------+--------------
+ medium_dot_com | medium_dot_com | medium_dot_com | public         | 2025-10-24 18:09:31.143355+05:30 | 2025-10-24
+(1 row)
+
+/******** QUERY *********/
+SELECT CURRENT_TIME
+/************************/
+
+     current_time      
+-----------------------
+ 18:09:59.260176+05:30
+(1 row)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extensions WHERE name = 'pg_stat_statements'
+/************************/
+
+        name        | default_version | installed_version |                                comment                                 
+--------------------+-----------------+-------------------+------------------------------------------------------------------------
+ pg_stat_statements | 1.12            |                   | track planning and execution statistics of all SQL statements executed
+(1 row)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name = 'pg_stat_statements'
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable | schema | requires |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+--------+----------+------------------------------------------------------------------------
+ pg_stat_statements | 1.4     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.10    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.11    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.12    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.5     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.6     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.7     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.8     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.9     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+(9 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions ORDER BY version::real DESC
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable |   schema   |      requires       |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+------------+---------------------+------------------------------------------------------------------------
+ pg_stat_statements | 1.9     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.9     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ btree_gist         | 1.8     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ citext             | 1.8     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ pg_stat_statements | 1.8     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.8     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ hstore             | 1.8     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ pg_stat_statements | 1.7     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.7     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ citext             | 1.7     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ btree_gist         | 1.7     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ hstore             | 1.7     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ citext             | 1.6     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ pg_trgm            | 1.6     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ btree_gist         | 1.6     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ hstore             | 1.6     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ pageinspect        | 1.6     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_buffercache     | 1.6     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ pg_stat_statements | 1.6     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pgstattuple        | 1.5     | f         | t         | f       | t           |            |                     | show tuple-level statistics
+ pg_stat_statements | 1.5     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ intarray           | 1.5     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ pg_buffercache     | 1.5     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ btree_gist         | 1.5     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ citext             | 1.5     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ pageinspect        | 1.5     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ cube               | 1.5     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ pg_trgm            | 1.5     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ amcheck            | 1.5     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ hstore             | 1.5     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ btree_gist         | 1.4     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ pg_stat_statements | 1.4     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pg_trgm            | 1.4     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ intarray           | 1.4     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ seg                | 1.4     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ pg_buffercache     | 1.4     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ pgcrypto           | 1.4     | f         | t         | t       | t           |            |                     | cryptographic functions
+ hstore             | 1.4     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ citext             | 1.4     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ cube               | 1.4     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ pgstattuple        | 1.4     | f         | t         | f       | t           |            |                     | show tuple-level statistics
+ amcheck            | 1.4     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ pg_freespacemap    | 1.3     | f         | t         | f       | t           |            |                     | examine the free space map (FSM)
+ pgcrypto           | 1.3     | f         | t         | t       | t           |            |                     | cryptographic functions
+ seg                | 1.3     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ ltree              | 1.3     | f         | t         | t       | t           |            |                     | data type for hierarchical tree-like structures
+ pg_buffercache     | 1.3     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ btree_gin          | 1.3     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ btree_gist         | 1.3     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ amcheck            | 1.3     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ cube               | 1.3     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ pg_trgm            | 1.3     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ intarray           | 1.3     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ isn                | 1.3     | f         | t         | t       | t           |            |                     | data types for international product numbering standards
+ pg_visibility      | 1.2     | f         | t         | f       | t           |            |                     | examine the visibility map (VM) and page-level visibility info
+ amcheck            | 1.2     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ btree_gin          | 1.2     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ btree_gist         | 1.2     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ cube               | 1.2     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ dblink             | 1.2     | f         | t         | f       | t           |            |                     | connect to other PostgreSQL databases from within a database
+ earthdistance      | 1.2     | f         | t         | f       | t           |            | {cube}              | calculate great-circle distances on the surface of the Earth
+ fuzzystrmatch      | 1.2     | f         | t         | t       | t           |            |                     | determine similarities and distance between strings
+ intarray           | 1.2     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ isn                | 1.2     | f         | t         | t       | t           |            |                     | data types for international product numbering standards
+ lo                 | 1.2     | f         | t         | t       | t           |            |                     | Large Object maintenance
+ ltree              | 1.2     | f         | t         | t       | t           |            |                     | data type for hierarchical tree-like structures
+ pg_buffercache     | 1.2     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ pg_freespacemap    | 1.2     | f         | t         | f       | t           |            |                     | examine the free space map (FSM)
+ pg_prewarm         | 1.2     | f         | t         | f       | t           |            |                     | prewarm relation data
+ pgrowlocks         | 1.2     | f         | t         | f       | t           |            |                     | show row-level locking information
+ postgres_fdw       | 1.2     | f         | t         | f       | t           |            |                     | foreign-data wrapper for remote PostgreSQL servers
+ seg                | 1.2     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ sslinfo            | 1.2     | f         | t         | f       | t           |            |                     | information about SSL certificates
+ xml2               | 1.2     | f         | t         | f       | f           |            |                     | XPath querying and XSLT
+ pageinspect        | 1.13    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_stat_statements | 1.12    | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.12    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_stat_statements | 1.11    | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.11    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_prewarm         | 1.1     | f         | t         | f       | t           |            |                     | prewarm relation data
+ pg_freespacemap    | 1.1     | f         | t         | f       | t           |            |                     | examine the free space map (FSM)
+ pg_walinspect      | 1.1     | f         | t         | f       | t           |            |                     | functions to inspect contents of PostgreSQL Write-Ahead Log
+ btree_gin          | 1.1     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ isn                | 1.1     | f         | t         | t       | t           |            |                     | data types for international product numbering standards
+ fuzzystrmatch      | 1.1     | f         | t         | t       | t           |            |                     | determine similarities and distance between strings
+ unaccent           | 1.1     | f         | t         | t       | t           |            |                     | text search dictionary that removes accents
+ uuid-ossp          | 1.1     | f         | t         | t       | t           |            |                     | generate universally unique identifiers (UUIDs)
+ xml2               | 1.1     | f         | t         | f       | f           |            |                     | XPath querying and XSLT
+ pg_stat_statements | 1.10    | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.10    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ earthdistance      | 1.1     | f         | t         | f       | t           |            | {cube}              | calculate great-circle distances on the surface of the Earth
+ ltree              | 1.1     | f         | t         | t       | t           |            |                     | data type for hierarchical tree-like structures
+ postgres_fdw       | 1.1     | f         | t         | f       | t           |            |                     | foreign-data wrapper for remote PostgreSQL servers
+ lo                 | 1.1     | f         | t         | t       | t           |            |                     | Large Object maintenance
+ intagg             | 1.1     | f         | t         | f       | t           |            |                     | integer aggregator and enumerator (obsolete)
+ seg                | 1.1     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ pg_visibility      | 1.1     | f         | t         | f       | t           |            |                     | examine the visibility map (VM) and page-level visibility info
+ amcheck            | 1.1     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ tablefunc          | 1.0     | f         | t         | t       | t           |            |                     | functions that manipulate whole tables, including crosstab
+ tcn                | 1.0     | f         | t         | t       | t           |            |                     | Triggered change notifications
+ tsm_system_rows    | 1.0     | f         | t         | t       | t           |            |                     | TABLESAMPLE method which accepts number of rows as a limit
+ tsm_system_time    | 1.0     | f         | t         | t       | t           |            |                     | TABLESAMPLE method which accepts time in milliseconds as a limit
+ plpython3u         | 1.0     | f         | t         | f       | f           | pg_catalog |                     | PL/Python3U untrusted procedural language
+ bool_plperl        | 1.0     | f         | t         | t       | t           |            | {plperl}            | transform between bool and plperl
+ moddatetime        | 1.0     | f         | t         | f       | t           |            |                     | functions for tracking last modification time
+ refint             | 1.0     | f         | t         | f       | t           |            |                     | functions for implementing referential integrity (obsolete)
+ bool_plperlu       | 1.0     | f         | t         | f       | t           |            | {plperlu}           | transform between bool and plperlu
+ jsonb_plperl       | 1.0     | f         | t         | t       | t           |            | {plperl}            | transform between jsonb and plperl
+ pg_logicalinspect  | 1.0     | f         | t         | f       | t           |            |                     | functions to inspect logical decoding components
+ plperl             | 1.0     | f         | t         | t       | f           | pg_catalog |                     | PL/Perl procedural language
+ insert_username    | 1.0     | f         | t         | f       | t           |            |                     | functions for tracking who changed a table
+ hstore_plperlu     | 1.0     | f         | t         | f       | t           |            | {hstore,plperlu}    | transform between hstore and plperlu
+ hstore_plperl      | 1.0     | f         | t         | f       | t           |            | {hstore,plperl}     | transform between hstore and plperl
+ pg_surgery         | 1.0     | f         | t         | f       | t           |            |                     | extension to perform surgery on a damaged relation
+ file_fdw           | 1.0     | f         | t         | f       | t           |            |                     | foreign-data wrapper for flat file access
+ dict_xsyn          | 1.0     | f         | t         | f       | t           |            |                     | text search dictionary template for extended synonym processing
+ dict_int           | 1.0     | f         | t         | t       | t           |            |                     | text search dictionary template for integers
+ plpgsql            | 1.0     | t         | t         | t       | f           | pg_catalog |                     | PL/pgSQL procedural language
+ pg_walinspect      | 1.0     | f         | t         | f       | t           |            |                     | functions to inspect contents of PostgreSQL Write-Ahead Log
+ btree_gin          | 1.0     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ plperlu            | 1.0     | f         | t         | f       | f           | pg_catalog |                     | PL/PerlU untrusted procedural language
+ bloom              | 1.0     | f         | t         | f       | t           |            |                     | bloom access method - signature file based index
+ autoinc            | 1.0     | f         | t         | f       | t           |            |                     | functions for autoincrementing fields
+ postgres_fdw       | 1.0     | f         | t         | f       | t           |            |                     | foreign-data wrapper for remote PostgreSQL servers
+ hstore_plpython3u  | 1.0     | f         | t         | f       | t           |            | {hstore,plpython3u} | transform between hstore and plpython3u
+ jsonb_plperlu      | 1.0     | f         | t         | f       | t           |            | {plperlu}           | transform between jsonb and plperlu
+ jsonb_plpython3u   | 1.0     | f         | t         | f       | t           |            | {plpython3u}        | transform between jsonb and plpython3u
+ amcheck            | 1.0     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ ltree_plpython3u   | 1.0     | f         | t         | f       | t           |            | {ltree,plpython3u}  | transform between ltree and plpython3u
+(129 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions ORDER BY version::real DESC
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable |   schema   |      requires       |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+------------+---------------------+------------------------------------------------------------------------
+ pg_stat_statements | 1.9     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.9     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ btree_gist         | 1.8     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ citext             | 1.8     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ pg_stat_statements | 1.8     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.8     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ hstore             | 1.8     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ pg_stat_statements | 1.7     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.7     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ citext             | 1.7     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ btree_gist         | 1.7     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ hstore             | 1.7     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ citext             | 1.6     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ pg_trgm            | 1.6     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ btree_gist         | 1.6     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ hstore             | 1.6     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ pageinspect        | 1.6     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_buffercache     | 1.6     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ pg_stat_statements | 1.6     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pgstattuple        | 1.5     | f         | t         | f       | t           |            |                     | show tuple-level statistics
+ pg_stat_statements | 1.5     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ intarray           | 1.5     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ pg_buffercache     | 1.5     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ btree_gist         | 1.5     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ citext             | 1.5     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ pageinspect        | 1.5     | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ cube               | 1.5     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ pg_trgm            | 1.5     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ amcheck            | 1.5     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ hstore             | 1.5     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ btree_gist         | 1.4     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ pg_stat_statements | 1.4     | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pg_trgm            | 1.4     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ intarray           | 1.4     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ seg                | 1.4     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ pg_buffercache     | 1.4     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ pgcrypto           | 1.4     | f         | t         | t       | t           |            |                     | cryptographic functions
+ hstore             | 1.4     | f         | t         | t       | t           |            |                     | data type for storing sets of (key, value) pairs
+ citext             | 1.4     | f         | t         | t       | t           |            |                     | data type for case-insensitive character strings
+ cube               | 1.4     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ pgstattuple        | 1.4     | f         | t         | f       | t           |            |                     | show tuple-level statistics
+ amcheck            | 1.4     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ pg_freespacemap    | 1.3     | f         | t         | f       | t           |            |                     | examine the free space map (FSM)
+ pgcrypto           | 1.3     | f         | t         | t       | t           |            |                     | cryptographic functions
+ seg                | 1.3     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ ltree              | 1.3     | f         | t         | t       | t           |            |                     | data type for hierarchical tree-like structures
+ pg_buffercache     | 1.3     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ btree_gin          | 1.3     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ btree_gist         | 1.3     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ amcheck            | 1.3     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ cube               | 1.3     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ pg_trgm            | 1.3     | f         | t         | t       | t           |            |                     | text similarity measurement and index searching based on trigrams
+ intarray           | 1.3     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ isn                | 1.3     | f         | t         | t       | t           |            |                     | data types for international product numbering standards
+ pg_visibility      | 1.2     | f         | t         | f       | t           |            |                     | examine the visibility map (VM) and page-level visibility info
+ amcheck            | 1.2     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ btree_gin          | 1.2     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ btree_gist         | 1.2     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GiST
+ cube               | 1.2     | f         | t         | t       | t           |            |                     | data type for multidimensional cubes
+ dblink             | 1.2     | f         | t         | f       | t           |            |                     | connect to other PostgreSQL databases from within a database
+ earthdistance      | 1.2     | f         | t         | f       | t           |            | {cube}              | calculate great-circle distances on the surface of the Earth
+ fuzzystrmatch      | 1.2     | f         | t         | t       | t           |            |                     | determine similarities and distance between strings
+ intarray           | 1.2     | f         | t         | t       | t           |            |                     | functions, operators, and index support for 1-D arrays of integers
+ isn                | 1.2     | f         | t         | t       | t           |            |                     | data types for international product numbering standards
+ lo                 | 1.2     | f         | t         | t       | t           |            |                     | Large Object maintenance
+ ltree              | 1.2     | f         | t         | t       | t           |            |                     | data type for hierarchical tree-like structures
+ pg_buffercache     | 1.2     | f         | t         | f       | t           |            |                     | examine the shared buffer cache
+ pg_freespacemap    | 1.2     | f         | t         | f       | t           |            |                     | examine the free space map (FSM)
+ pg_prewarm         | 1.2     | f         | t         | f       | t           |            |                     | prewarm relation data
+ pgrowlocks         | 1.2     | f         | t         | f       | t           |            |                     | show row-level locking information
+ postgres_fdw       | 1.2     | f         | t         | f       | t           |            |                     | foreign-data wrapper for remote PostgreSQL servers
+ seg                | 1.2     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ sslinfo            | 1.2     | f         | t         | f       | t           |            |                     | information about SSL certificates
+ xml2               | 1.2     | f         | t         | f       | f           |            |                     | XPath querying and XSLT
+ pageinspect        | 1.13    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_stat_statements | 1.12    | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.12    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_stat_statements | 1.11    | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.11    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ pg_prewarm         | 1.1     | f         | t         | f       | t           |            |                     | prewarm relation data
+ pg_freespacemap    | 1.1     | f         | t         | f       | t           |            |                     | examine the free space map (FSM)
+ pg_walinspect      | 1.1     | f         | t         | f       | t           |            |                     | functions to inspect contents of PostgreSQL Write-Ahead Log
+ btree_gin          | 1.1     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ isn                | 1.1     | f         | t         | t       | t           |            |                     | data types for international product numbering standards
+ fuzzystrmatch      | 1.1     | f         | t         | t       | t           |            |                     | determine similarities and distance between strings
+ unaccent           | 1.1     | f         | t         | t       | t           |            |                     | text search dictionary that removes accents
+ uuid-ossp          | 1.1     | f         | t         | t       | t           |            |                     | generate universally unique identifiers (UUIDs)
+ xml2               | 1.1     | f         | t         | f       | f           |            |                     | XPath querying and XSLT
+ pg_stat_statements | 1.10    | f         | t         | f       | t           |            |                     | track planning and execution statistics of all SQL statements executed
+ pageinspect        | 1.10    | f         | t         | f       | t           |            |                     | inspect the contents of database pages at a low level
+ earthdistance      | 1.1     | f         | t         | f       | t           |            | {cube}              | calculate great-circle distances on the surface of the Earth
+ ltree              | 1.1     | f         | t         | t       | t           |            |                     | data type for hierarchical tree-like structures
+ postgres_fdw       | 1.1     | f         | t         | f       | t           |            |                     | foreign-data wrapper for remote PostgreSQL servers
+ lo                 | 1.1     | f         | t         | t       | t           |            |                     | Large Object maintenance
+ intagg             | 1.1     | f         | t         | f       | t           |            |                     | integer aggregator and enumerator (obsolete)
+ seg                | 1.1     | f         | t         | t       | t           |            |                     | data type for representing line segments or floating-point intervals
+ pg_visibility      | 1.1     | f         | t         | f       | t           |            |                     | examine the visibility map (VM) and page-level visibility info
+ amcheck            | 1.1     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ tablefunc          | 1.0     | f         | t         | t       | t           |            |                     | functions that manipulate whole tables, including crosstab
+ tcn                | 1.0     | f         | t         | t       | t           |            |                     | Triggered change notifications
+ tsm_system_rows    | 1.0     | f         | t         | t       | t           |            |                     | TABLESAMPLE method which accepts number of rows as a limit
+ tsm_system_time    | 1.0     | f         | t         | t       | t           |            |                     | TABLESAMPLE method which accepts time in milliseconds as a limit
+ plpython3u         | 1.0     | f         | t         | f       | f           | pg_catalog |                     | PL/Python3U untrusted procedural language
+ bool_plperl        | 1.0     | f         | t         | t       | t           |            | {plperl}            | transform between bool and plperl
+ moddatetime        | 1.0     | f         | t         | f       | t           |            |                     | functions for tracking last modification time
+ refint             | 1.0     | f         | t         | f       | t           |            |                     | functions for implementing referential integrity (obsolete)
+ bool_plperlu       | 1.0     | f         | t         | f       | t           |            | {plperlu}           | transform between bool and plperlu
+ jsonb_plperl       | 1.0     | f         | t         | t       | t           |            | {plperl}            | transform between jsonb and plperl
+ pg_logicalinspect  | 1.0     | f         | t         | f       | t           |            |                     | functions to inspect logical decoding components
+ plperl             | 1.0     | f         | t         | t       | f           | pg_catalog |                     | PL/Perl procedural language
+ insert_username    | 1.0     | f         | t         | f       | t           |            |                     | functions for tracking who changed a table
+ hstore_plperlu     | 1.0     | f         | t         | f       | t           |            | {hstore,plperlu}    | transform between hstore and plperlu
+ hstore_plperl      | 1.0     | f         | t         | f       | t           |            | {hstore,plperl}     | transform between hstore and plperl
+ pg_surgery         | 1.0     | f         | t         | f       | t           |            |                     | extension to perform surgery on a damaged relation
+ file_fdw           | 1.0     | f         | t         | f       | t           |            |                     | foreign-data wrapper for flat file access
+ dict_xsyn          | 1.0     | f         | t         | f       | t           |            |                     | text search dictionary template for extended synonym processing
+ dict_int           | 1.0     | f         | t         | t       | t           |            |                     | text search dictionary template for integers
+ plpgsql            | 1.0     | t         | t         | t       | f           | pg_catalog |                     | PL/pgSQL procedural language
+ pg_walinspect      | 1.0     | f         | t         | f       | t           |            |                     | functions to inspect contents of PostgreSQL Write-Ahead Log
+ btree_gin          | 1.0     | f         | t         | t       | t           |            |                     | support for indexing common datatypes in GIN
+ plperlu            | 1.0     | f         | t         | f       | f           | pg_catalog |                     | PL/PerlU untrusted procedural language
+ bloom              | 1.0     | f         | t         | f       | t           |            |                     | bloom access method - signature file based index
+ autoinc            | 1.0     | f         | t         | f       | t           |            |                     | functions for autoincrementing fields
+ postgres_fdw       | 1.0     | f         | t         | f       | t           |            |                     | foreign-data wrapper for remote PostgreSQL servers
+ hstore_plpython3u  | 1.0     | f         | t         | f       | t           |            | {hstore,plpython3u} | transform between hstore and plpython3u
+ jsonb_plperlu      | 1.0     | f         | t         | f       | t           |            | {plperlu}           | transform between jsonb and plperlu
+ jsonb_plpython3u   | 1.0     | f         | t         | f       | t           |            | {plpython3u}        | transform between jsonb and plpython3u
+ amcheck            | 1.0     | f         | t         | f       | t           |            |                     | functions for verifying relation integrity
+ ltree_plpython3u   | 1.0     | f         | t         | f       | t           |            | {ltree,plpython3u}  | transform between ltree and plpython3u
+(129 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name ='pg_stat_statements' ORDER BY version::real DESC
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable | schema | requires |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+--------+----------+------------------------------------------------------------------------
+ pg_stat_statements | 1.9     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.8     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.7     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.6     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.5     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.4     | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.12    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.11    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.10    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+(9 rows)
+
+/******** QUERY *********/
+EXPLAIN (
+	ANALYZE true,
+	SETTINGS true,
+	TIMING true,
+	CPU true,
+	MEMORY true,
+	FORMAT TEXT
+	VERBOSE true,
+	BUFFERS true
+)
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name ='pg_stat_statements' ORDER BY version::real DESC
+/************************/
+
+/******** QUERY *********/
+EXPLAIN (
+	ANALYZE true,
+	SETTINGS true,
+	TIMING true,
+	CPU true,
+	MEMORY true,
+	FORMAT TEXT,
+	VERBOSE true,
+	BUFFERS true
+)
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name ='pg_stat_statements' ORDER BY version::real DESC
+/************************/
+
+/******** QUERY *********/
+EXPLAIN (
+	ANALYZE true,
+	SETTINGS true,
+	TIMING true,
+	MEMORY true,
+	FORMAT TEXT,
+	VERBOSE true,
+	BUFFERS true,
+	COSTS true
+)
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name ='pg_stat_statements' ORDER BY version::real DESC
+/************************/
+
+                                                                          QUERY PLAN                                                                          
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=2.31..2.32 rows=1 width=232) (actual time=45.401..45.402 rows=9.00 loops=1)
+   Output: e.name, e.version, ((x.extname IS NOT NULL)), e.superuser, e.trusted, e.relocatable, e.schema, e.requires, e.comment, ((e.version)::real)
+   Sort Key: ((e.version)::real) DESC
+   Sort Method: quicksort  Memory: 26kB
+   Buffers: shared hit=9
+   ->  Nested Loop Left Join  (cost=0.03..2.31 rows=1 width=232) (actual time=45.384..45.393 rows=9.00 loops=1)
+         Output: e.name, e.version, (x.extname IS NOT NULL), e.superuser, e.trusted, e.relocatable, e.schema, e.requires, e.comment, (e.version)::real
+         Inner Unique: true
+         Join Filter: (e.version = x.extversion)
+         Buffers: shared hit=9
+         ->  Function Scan on pg_catalog.pg_available_extension_versions e  (cost=0.03..1.27 rows=1 width=227) (actual time=45.365..45.368 rows=9.00 loops=1)
+               Output: e.name, e.version, e.superuser, e.trusted, e.relocatable, e.schema, e.requires, e.comment
+               Function Call: pg_available_extension_versions()
+               Filter: (e.name = 'pg_stat_statements'::name)
+               Rows Removed by Filter: 120
+         ->  Seq Scan on pg_catalog.pg_extension x  (cost=0.00..1.01 rows=1 width=68) (actual time=0.002..0.002 rows=0.00 loops=9)
+               Output: x.oid, x.extname, x.extowner, x.extnamespace, x.extrelocatable, x.extversion, x.extconfig, x.extcondition
+               Filter: (x.extname = 'pg_stat_statements'::name)
+               Rows Removed by Filter: 1
+               Buffers: shared hit=9
+ Planning:
+   Memory: used=52kB  allocated=64kB
+ Planning Time: 0.153 ms
+ Execution Time: 45.812 ms
+(24 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE version = '1.12'
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable | schema | requires |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+--------+----------+------------------------------------------------------------------------
+ pageinspect        | 1.12    | f         | t         | f       | t           |        |          | inspect the contents of database pages at a low level
+ pg_stat_statements | 1.12    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+(2 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE version = '1.12' AND name = 'pg_stat_statements'
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable | schema | requires |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+--------+----------+------------------------------------------------------------------------
+ pg_stat_statements | 1.12    | f         | t         | f       | t           |        |          | track planning and execution statistics of all SQL statements executed
+(1 row)
+
+/******** QUERY *********/
+SELECT CURRENT_SCHEMA
+/************************/
+
+ current_schema 
+----------------
+ public
+(1 row)
+
+/******** QUERY *********/
+SET search_path = medium_dot_com
+/************************/
+
+SET
+/******** QUERY *********/
+SELECT CURRENT_SCHEMA
+/************************/
+
+ current_schema 
+----------------
+ 
+(1 row)
+
+/******** QUERY *********/
+SELECT CURRENT_SCHEMA
+/************************/
+
+ current_schema 
+----------------
+ NULL
+(1 row)
+
+/******** QUERY *********/
+SET search_path = public,medium_dot_com
+/************************/
+
+SET
+/******** QUERY *********/
+SELECT CURRENT_SCHEMA
+/************************/
+
+ current_schema 
+----------------
+ public
+(1 row)
+
+/******** QUERY *********/
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA medium_dot_com VERSION 1.12 CASCADE
+/************************/
+
+/******** QUERY *********/
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA medium_dot_com VERSION '1.12'::name CASCADE
+/************************/
+
+/******** QUERY *********/
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA medium_dot_com VERSION '1.12' CASCADE
+/************************/
+
+/******** QUERY *********/
+CREATE SCHEMA IF NOT EXISTS priyanshu_rajput AUTHORIZATION medium_dot_com
+/************************/
+
+CREATE SCHEMA
+/******** QUERY *********/
+SELECT CURRENT_SCHEMA
+/************************/
+
+ current_schema 
+----------------
+ public
+(1 row)
+
+/******** QUERY *********/
+SET search_path = priyanshu_rajput
+/************************/
+
+SET
+/******** QUERY *********/
+SELECT CURRENT_SCHEMA
+/************************/
+
+  current_schema  
+------------------
+ priyanshu_rajput
+(1 row)
+
+/******** QUERY *********/
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA CURRENT_SCHEMA VERSION '1.12' CASCADE
+/************************/
+
+/******** QUERY *********/
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA priyanshu_rajput VERSION '1.12' CASCADE
+/************************/
+
