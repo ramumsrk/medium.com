@@ -1,0 +1,335 @@
+/******** QUERY *********/
+CREATE SCHEMA IF NOT EXISTS azlan_jamal AUTHORIZATION medium_dot_com
+/************************/
+
+CREATE SCHEMA
+/******** QUERY *********/
+CREATE TABLE IF NOT EXISTS azlan_jamal.users
+(
+    user_id SMALLSERIAL CONSTRAINT pk_user_id PRIMARY KEY USING INDEX TABLESPACE medium_dot_com_index,
+    username TEXT CONSTRAINT nn_username NOT NULL
+)
+TABLESPACE medium_dot_com_data
+/************************/
+
+CREATE TABLE
+/******** QUERY *********/
+EXPLAIN (
+    ANALYZE true,
+    SETTINGS true,
+    TIMING true,
+    BUFFERS true,
+    MEMORY true,
+    COSTS true,
+    VERBOSE true
+)
+INSERT INTO azlan_jamal.users
+(username)
+VALUES
+('Azlan Jamal'::text)
+RETURNING OLD.user_id, NEW.user_id, OLD.username, NEW.username
+/************************/
+
+                                                 QUERY PLAN                                                  
+-------------------------------------------------------------------------------------------------------------
+ Insert on azlan_jamal.users  (cost=0.00..0.01 rows=1 width=34) (actual time=1.314..1.315 rows=1.00 loops=1)
+   Output: old.user_id, new.user_id, old.username, new.username
+   Buffers: shared hit=28 read=1 dirtied=6 written=2
+   ->  Result  (cost=0.00..0.01 rows=1 width=34) (actual time=0.069..0.069 rows=1.00 loops=1)
+         Output: nextval('azlan_jamal.users_user_id_seq'::regclass), 'Azlan Jamal'::text
+         Buffers: shared hit=14 dirtied=2
+ Planning:
+   Memory: used=10kB  allocated=16kB
+ Planning Time: 0.383 ms
+ Execution Time: 1.478 ms
+(10 rows)
+
+/******** QUERY *********/
+INSERT INTO azlan_jamal.users
+(username)
+VALUES
+('Azlan Jamal'::text)
+RETURNING OLD.user_id, NEW.user_id, OLD.username, NEW.username
+/************************/
+
+ user_id | user_id | username |  username   
+---------+---------+----------+-------------
+    NULL |       2 | NULL     | Azlan Jamal
+(1 row)
+
+INSERT 0 1
+/******** QUERY *********/
+CREATE SEQUENCE IF NOT EXISTS azlan_jamal.first_sequence
+/************************/
+
+CREATE SEQUENCE
+/******** QUERY *********/
+CREATE TABLE IF NOT EXISTS azlan_jamal.first_users
+(
+    user_id SERIAL CONSTRAINT pk_first_user_id PRIMARY KEY USING INDEX TABLESPACE medium_dot_com_index DEFAULT NEXTVAL(azlan_jamal.first_sequence),
+    username TEXT CONSTRAINT nn_username NOT NULL
+)
+TABLESPACE medium_dot_com_data
+/************************/
+
+/******** QUERY *********/
+CREATE TABLE IF NOT EXISTS azlan_jamal.first_users
+(
+    user_id SMALLINT CONSTRAINT pk_first_user_id PRIMARY KEY USING INDEX TABLESPACE medium_dot_com_index DEFAULT NEXTVAL(azlan_jamal.first_sequence),
+    username TEXT CONSTRAINT nn_username NOT NULL
+)
+TABLESPACE medium_dot_com_data
+/************************/
+
+/******** QUERY *********/
+CREATE TABLE IF NOT EXISTS azlan_jamal.first_users
+(
+    user_id SMALLINT CONSTRAINT pk_first_user_id PRIMARY KEY USING INDEX TABLESPACE medium_dot_com_index DEFAULT NEXTVAL('azlan_jamal.first_sequence'),
+    username TEXT CONSTRAINT nn_username NOT NULL
+)
+TABLESPACE medium_dot_com_data
+/************************/
+
+CREATE TABLE
+/******** QUERY *********/
+EXPLAIN(
+    ANALYZE true,
+    SETTINGS true,
+    VERBOSE true,
+    MEMORY true,
+    BUFFERS true,
+    COSTS true,
+    FORMAT TEXT
+)
+INSERT INTO azlan_jamal.first_users
+(username)
+VALUES
+('Azlan Jamal'::text)
+RETURNING OLD.user_id, NEW.user_id, OLD.username, NEW.username
+/************************/
+
+                                                    QUERY PLAN                                                     
+-------------------------------------------------------------------------------------------------------------------
+ Insert on azlan_jamal.first_users  (cost=0.00..0.01 rows=1 width=34) (actual time=1.932..1.935 rows=1.00 loops=1)
+   Output: old.user_id, new.user_id, old.username, new.username
+   Buffers: shared hit=25 read=1 dirtied=7 written=2
+   ->  Result  (cost=0.00..0.01 rows=1 width=34) (actual time=0.069..0.070 rows=1.00 loops=1)
+         Output: nextval('azlan_jamal.first_sequence'::regclass), 'Azlan Jamal'::text
+         Buffers: shared hit=11 dirtied=3
+ Planning:
+   Memory: used=10kB  allocated=16kB
+ Planning Time: 0.039 ms
+ Execution Time: 1.962 ms
+(10 rows)
+
+/******** QUERY *********/
+SELECT user_id, username FROM azlan_jamal.first_users
+/************************/
+
+ user_id |  username   
+---------+-------------
+       1 | Azlan Jamal
+(1 row)
+
+/******** QUERY *********/
+EXPLAIN (
+    ANALYZE true,
+    SETTINGS true,
+    VERBOSE true,
+    BUFFERS true,
+    MEMORY true,
+    COSTS true,
+    FORMAT TEXT
+)
+SELECT * FROM pg_catalog.pg_available_extensions
+/************************/
+
+                                                                     QUERY PLAN                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ Hash Left Join  (cost=1.05..2.32 rows=100 width=132) (actual time=173.954..173.996 rows=58.00 loops=1)
+   Output: e.name, e.default_version, x.extversion, e.comment
+   Inner Unique: true
+   Hash Cond: (e.name = x.extname)
+   Buffers: shared read=1
+   ->  Function Scan on pg_catalog.pg_available_extensions e  (cost=0.03..1.02 rows=100 width=128) (actual time=152.110..152.122 rows=58.00 loops=1)
+         Output: e.name, e.default_version, e.comment
+         Function Call: pg_available_extensions()
+   ->  Hash  (cost=1.01..1.01 rows=1 width=68) (actual time=21.788..21.789 rows=1.00 loops=1)
+         Output: x.extversion, x.extname
+         Buckets: 1024  Batches: 1  Memory Usage: 9kB
+         Buffers: shared read=1
+         ->  Seq Scan on pg_catalog.pg_extension x  (cost=0.00..1.01 rows=1 width=68) (actual time=21.670..21.673 rows=1.00 loops=1)
+               Output: x.extversion, x.extname
+               Buffers: shared read=1
+ Planning:
+   Buffers: shared hit=101 read=25
+   Memory: used=35kB  allocated=64kB
+ Planning Time: 242.935 ms
+ Execution Time: 174.146 ms
+(20 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extensions
+/************************/
+
+        name        | default_version | installed_version |                                comment                                 
+--------------------+-----------------+-------------------+------------------------------------------------------------------------
+ plpgsql            | 1.0             | 1.0               | PL/pgSQL procedural language
+ amcheck            | 1.5             | NULL              | functions for verifying relation integrity
+ autoinc            | 1.0             | NULL              | functions for autoincrementing fields
+ bloom              | 1.0             | NULL              | bloom access method - signature file based index
+ btree_gin          | 1.3             | NULL              | support for indexing common datatypes in GIN
+ btree_gist         | 1.8             | NULL              | support for indexing common datatypes in GiST
+ citext             | 1.8             | NULL              | data type for case-insensitive character strings
+ cube               | 1.5             | NULL              | data type for multidimensional cubes
+ dblink             | 1.2             | NULL              | connect to other PostgreSQL databases from within a database
+ dict_int           | 1.0             | NULL              | text search dictionary template for integers
+ dict_xsyn          | 1.0             | NULL              | text search dictionary template for extended synonym processing
+ earthdistance      | 1.2             | NULL              | calculate great-circle distances on the surface of the Earth
+ file_fdw           | 1.0             | NULL              | foreign-data wrapper for flat file access
+ fuzzystrmatch      | 1.2             | NULL              | determine similarities and distance between strings
+ hstore             | 1.8             | NULL              | data type for storing sets of (key, value) pairs
+ hstore_plperl      | 1.0             | NULL              | transform between hstore and plperl
+ hstore_plperlu     | 1.0             | NULL              | transform between hstore and plperlu
+ insert_username    | 1.0             | NULL              | functions for tracking who changed a table
+ intagg             | 1.1             | NULL              | integer aggregator and enumerator (obsolete)
+ intarray           | 1.5             | NULL              | functions, operators, and index support for 1-D arrays of integers
+ isn                | 1.3             | NULL              | data types for international product numbering standards
+ jsonb_plperl       | 1.0             | NULL              | transform between jsonb and plperl
+ jsonb_plperlu      | 1.0             | NULL              | transform between jsonb and plperlu
+ lo                 | 1.2             | NULL              | Large Object maintenance
+ ltree              | 1.3             | NULL              | data type for hierarchical tree-like structures
+ moddatetime        | 1.0             | NULL              | functions for tracking last modification time
+ pageinspect        | 1.13            | NULL              | inspect the contents of database pages at a low level
+ pg_buffercache     | 1.6             | NULL              | examine the shared buffer cache
+ pg_freespacemap    | 1.3             | NULL              | examine the free space map (FSM)
+ pg_logicalinspect  | 1.0             | NULL              | functions to inspect logical decoding components
+ pg_prewarm         | 1.2             | NULL              | prewarm relation data
+ pg_stat_statements | 1.12            | NULL              | track planning and execution statistics of all SQL statements executed
+ pg_surgery         | 1.0             | NULL              | extension to perform surgery on a damaged relation
+ pg_trgm            | 1.6             | NULL              | text similarity measurement and index searching based on trigrams
+ pg_visibility      | 1.2             | NULL              | examine the visibility map (VM) and page-level visibility info
+ pg_walinspect      | 1.1             | NULL              | functions to inspect contents of PostgreSQL Write-Ahead Log
+ pgcrypto           | 1.4             | NULL              | cryptographic functions
+ pgrowlocks         | 1.2             | NULL              | show row-level locking information
+ pgstattuple        | 1.5             | NULL              | show tuple-level statistics
+ postgres_fdw       | 1.2             | NULL              | foreign-data wrapper for remote PostgreSQL servers
+ refint             | 1.0             | NULL              | functions for implementing referential integrity (obsolete)
+ seg                | 1.4             | NULL              | data type for representing line segments or floating-point intervals
+ sslinfo            | 1.2             | NULL              | information about SSL certificates
+ tablefunc          | 1.0             | NULL              | functions that manipulate whole tables, including crosstab
+ tcn                | 1.0             | NULL              | Triggered change notifications
+ tsm_system_rows    | 1.0             | NULL              | TABLESAMPLE method which accepts number of rows as a limit
+ tsm_system_time    | 1.0             | NULL              | TABLESAMPLE method which accepts time in milliseconds as a limit
+ unaccent           | 1.1             | NULL              | text search dictionary that removes accents
+ uuid-ossp          | 1.1             | NULL              | generate universally unique identifiers (UUIDs)
+ xml2               | 1.2             | NULL              | XPath querying and XSLT
+ bool_plperl        | 1.0             | NULL              | transform between bool and plperl
+ bool_plperlu       | 1.0             | NULL              | transform between bool and plperlu
+ plperl             | 1.0             | NULL              | PL/Perl procedural language
+ plperlu            | 1.0             | NULL              | PL/PerlU untrusted procedural language
+ hstore_plpython3u  | 1.0             | NULL              | transform between hstore and plpython3u
+ jsonb_plpython3u   | 1.0             | NULL              | transform between jsonb and plpython3u
+ ltree_plpython3u   | 1.0             | NULL              | transform between ltree and plpython3u
+ plpython3u         | 1.0             | NULL              | PL/Python3U untrusted procedural language
+(58 rows)
+
+/******** QUERY *********/
+EXPLAIN (
+    ANALYZE true,
+    SETTINGS true,
+    VERBOSE true,
+    BUFFERS true,
+    MEMORY true,
+    COSTS true,
+    FORMAT TEXT
+)
+SELECT * FROM pg_catalog.pg_available_extensions WHERE name = 'uuid-ossp'
+/************************/
+
+                                                                  QUERY PLAN                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop Left Join  (cost=0.03..2.30 rows=1 width=132) (actual time=3.874..3.876 rows=1.00 loops=1)
+   Output: e.name, e.default_version, x.extversion, e.comment
+   Inner Unique: true
+   Buffers: shared hit=1
+   ->  Function Scan on pg_catalog.pg_available_extensions e  (cost=0.03..1.27 rows=1 width=128) (actual time=3.858..3.859 rows=1.00 loops=1)
+         Output: e.name, e.default_version, e.comment
+         Function Call: pg_available_extensions()
+         Filter: (e.name = 'uuid-ossp'::name)
+         Rows Removed by Filter: 57
+   ->  Seq Scan on pg_catalog.pg_extension x  (cost=0.00..1.01 rows=1 width=68) (actual time=0.009..0.009 rows=0.00 loops=1)
+         Output: x.oid, x.extname, x.extowner, x.extnamespace, x.extrelocatable, x.extversion, x.extconfig, x.extcondition
+         Filter: (x.extname = 'uuid-ossp'::name)
+         Rows Removed by Filter: 1
+         Buffers: shared hit=1
+ Planning:
+   Memory: used=33kB  allocated=64kB
+ Planning Time: 0.195 ms
+ Execution Time: 4.319 ms
+(18 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extensions WHERE name = 'uuid-ossp'
+/************************/
+
+   name    | default_version | installed_version |                     comment                     
+-----------+-----------------+-------------------+-------------------------------------------------
+ uuid-ossp | 1.1             | NULL              | generate universally unique identifiers (UUIDs)
+(1 row)
+
+/******** QUERY *********/
+SELECT gen_random_uuid(), uuidv4(), uuidv7()
+/************************/
+
+           gen_random_uuid            |                uuidv4                |                uuidv7                
+--------------------------------------+--------------------------------------+--------------------------------------
+ 82af8d83-f070-4a1e-87ca-34a12b8175a9 | 460fad58-a69c-40d7-8124-187c736d2dfe | 019a154f-e1ad-729a-b55a-a81db17cdd6d
+(1 row)
+
+/******** QUERY *********/
+EXPLAIN (
+    ANALYZE true,
+    SETTINGS true,
+    VERBOSE true,
+    BUFFERS true,
+    MEMORY true,
+    COSTS true,
+    FORMAT TEXT
+)
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name = 'uuid-ossp'
+/************************/
+
+                                                                       QUERY PLAN                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop Left Join  (cost=0.03..2.30 rows=1 width=228) (actual time=18.184..18.186 rows=1.00 loops=1)
+   Output: e.name, e.version, (x.extname IS NOT NULL), e.superuser, e.trusted, e.relocatable, e.schema, e.requires, e.comment
+   Inner Unique: true
+   Join Filter: (e.version = x.extversion)
+   Buffers: shared hit=1
+   ->  Function Scan on pg_catalog.pg_available_extension_versions e  (cost=0.03..1.27 rows=1 width=227) (actual time=18.171..18.172 rows=1.00 loops=1)
+         Output: e.name, e.version, e.superuser, e.trusted, e.relocatable, e.schema, e.requires, e.comment
+         Function Call: pg_available_extension_versions()
+         Filter: (e.name = 'uuid-ossp'::name)
+         Rows Removed by Filter: 128
+   ->  Seq Scan on pg_catalog.pg_extension x  (cost=0.00..1.01 rows=1 width=68) (actual time=0.010..0.010 rows=0.00 loops=1)
+         Output: x.oid, x.extname, x.extowner, x.extnamespace, x.extrelocatable, x.extversion, x.extconfig, x.extcondition
+         Filter: (x.extname = 'uuid-ossp'::name)
+         Rows Removed by Filter: 1
+         Buffers: shared hit=1
+ Planning:
+   Buffers: shared hit=104 read=1
+   Memory: used=48kB  allocated=64kB
+ Planning Time: 0.436 ms
+ Execution Time: 18.206 ms
+(20 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name = 'uuid-ossp'
+/************************/
+
+   name    | version | installed | superuser | trusted | relocatable | schema | requires |                     comment                     
+-----------+---------+-----------+-----------+---------+-------------+--------+----------+-------------------------------------------------
+ uuid-ossp | 1.1     | f         | t         | t       | t           | NULL   | NULL     | generate universally unique identifiers (UUIDs)
+(1 row)
+
