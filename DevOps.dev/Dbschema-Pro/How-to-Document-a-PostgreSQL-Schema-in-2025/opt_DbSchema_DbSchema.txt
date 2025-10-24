@@ -1,0 +1,77 @@
+/opt/DbSchema/DbSchema
+11:36:35.408 [INFO ] STDOUT                         - Prism pipeline init order: es2 sw 
+11:36:35.414 [INFO ] STDOUT                         - Using Double Precision Marlin Rasterizer
+11:36:35.415 [INFO ] STDOUT                         - Using dirty region optimizations
+11:36:35.416 [INFO ] STDOUT                         - Not using texture mask for primitives
+11:36:35.416 [INFO ] STDOUT                         - Not forcing power of 2 sizes for textures
+11:36:35.417 [INFO ] STDOUT                         - Using hardware CLAMP_TO_ZERO mode
+11:36:35.417 [INFO ] STDOUT                         - Opting in for HiDPI pixel scaling
+11:36:35.422 [INFO ] STDOUT                         - Prism pipeline name = com.sun.prism.es2.ES2Pipeline
+11:36:35.424 [INFO ] STDOUT                         - Loading ES2 native library ... prism_es2
+11:36:35.430 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libprism_es2.so from relative path
+11:36:35.430 [INFO ] STDOUT                         -   succeeded.
+11:36:35.431 [INFO ] STDOUT                         - GLFactory using com.sun.prism.es2.X11GLFactory
+11:36:35.530 [INFO ] STDOUT                         - (X) Got class = class com.sun.prism.es2.ES2Pipeline
+11:36:35.532 [INFO ] STDOUT                         - Initialized prism pipeline: com.sun.prism.es2.ES2Pipeline
+11:36:35.534 [ERROR] STDERR                         - JavaFX: using com.sun.javafx.tk.quantum.QuantumToolkit
+11:36:35.540 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libglass.so from relative path
+11:36:35.644 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libglassgtk3.so from relative path
+11:36:35.745 [INFO ] STDOUT                         - Maximum supported texture size: 16384
+11:36:35.746 [INFO ] STDOUT                         - Maximum texture size clamped to 4096
+11:36:35.747 [INFO ] STDOUT                         - Non power of two texture support = true
+11:36:35.748 [INFO ] STDOUT                         - Maximum number of vertex attributes = 16
+11:36:35.748 [INFO ] STDOUT                         - Maximum number of uniform vertex components = 16384
+11:36:35.749 [INFO ] STDOUT                         - Maximum number of uniform fragment components = 16384
+11:36:35.750 [INFO ] STDOUT                         - Maximum number of varying components = 128
+11:36:35.750 [INFO ] STDOUT                         - Maximum number of texture units usable in a vertex shader = 32
+11:36:35.750 [INFO ] STDOUT                         - Maximum number of texture units usable in a fragment shader = 32
+11:36:35.751 [INFO ] STDOUT                         - Graphics Vendor: Intel
+11:36:35.751 [INFO ] STDOUT                         -        Renderer: Mesa Intel(R) UHD Graphics 730 (ADL-S GT1)
+11:36:35.752 [INFO ] STDOUT                         -         Version: 4.6 (Compatibility Profile) Mesa 25.1.9
+11:36:35.757 [ERROR] STDERR                         -  vsync: true vpipe: true
+11:36:35.845 [INFO ] com.wisecoders.dbs.DbSchemaApp - ==== Start DbSchema ====
+11:36:35.956 [INFO ] e.LicenseStateMachinePersister - LicenseStateMachine: creating new state machine
+11:36:36.100 [INFO ] com.wisecoders.dbs.DbSchemaApp - git hash                : 75002d57bf611a9554fd0c1694923185aa18f152
+11:36:36.101 [INFO ] com.wisecoders.dbs.DbSchemaApp - git branch              : main
+11:36:36.102 [INFO ] com.wisecoders.dbs.DbSchemaApp - build number            : 251021
+11:36:36.102 [INFO ] com.wisecoders.dbs.DbSchemaApp - build buildTimestampUtc : 2025-10-21T10:27:09.344887303
+11:36:36.103 [INFO ] com.wisecoders.dbs.DbSchemaApp - built by user           : Jenkins: cvmocanu
+11:36:36.103 [INFO ] com.wisecoders.dbs.DbSchemaApp - OS                      : Linux 6.17.4-200.fc42.x86_64+debug (amd64)
+11:36:36.105 [INFO ] com.wisecoders.dbs.DbSchemaApp - Java                    : BellSoft null (OpenJDK 64-Bit Server VM 21.0.6+10-LTS)
+11:36:36.106 [INFO ] com.wisecoders.dbs.DbSchemaApp - now                     : 2025-10-24T11:36:36.106535752
+11:36:36.107 [INFO ] com.wisecoders.dbs.DbSchemaApp - timezone                : Asia/Kolkata (UTC +05:30)
+11:36:36.107 [INFO ] com.wisecoders.dbs.DbSchemaApp - locale                  : en_IN
+11:36:36.140 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libjavafx_font.so from relative path
+11:36:36.145 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libjavafx_font_freetype.so from relative path
+11:36:36.420 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libjavafx_font_pango.so from relative path
+11:36:37.384 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: FillPgram_Color.frag
+11:36:37.480 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: DrawPgram_Color.frag
+11:36:37.527 [INFO ] STDOUT                         - new alphas with length = 4096
+11:36:37.532 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Texture_Color.frag
+11:36:37.556 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Solid_TextureRGB.frag
+11:36:37.592 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Solid_TextureFirstPassLCD.frag
+11:36:37.614 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Solid_TextureSecondPassLCD.frag
+11:36:37.674 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: FillPgram_RadialGradient_PAD.frag
+11:36:37.704 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Texture_LinearGradient_PAD.frag
+11:36:37.749 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: FillRoundRect_LinearGradient_PAD.frag
+11:36:37.783 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: DrawRoundRect_Color.frag
+11:36:37.818 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: FillRoundRect_Color.frag
+11:36:37.881 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Mask_TextureSuper.frag
+11:36:37.968 [INFO ] STDOUT                         - PPSRenderer: scenario.effect - createShader: Blend_SRC_IN
+11:36:39.486 [ERROR] STDERR                         - Loaded /opt/DbSchema/jre/lib/libjfxwebkit.so from relative path
+11:37:05.423 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:05.556 [INFO ] STDOUT                         - ES2ResourceFactory: Prism - createStockShader: Mask_TextureRGB.frag
+11:37:05.651 [INFO ] STDOUT                         - PPSRenderer: scenario.effect - createShader: LinearConvolveShadow_4
+11:37:13.047 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:18.622 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:26.864 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:31.224 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:34.878 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:36.341 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:37.300 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:38.405 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:40.093 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:46.148 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:37:49.590 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:38:08.303 [INFO ] com.wisecoders.dbs.sys.Fx      -  > next
+11:38:08.314 [INFO ] oders.dbs.tips.fx.FxTipsDialog - Close Quick tour Tips Dialog

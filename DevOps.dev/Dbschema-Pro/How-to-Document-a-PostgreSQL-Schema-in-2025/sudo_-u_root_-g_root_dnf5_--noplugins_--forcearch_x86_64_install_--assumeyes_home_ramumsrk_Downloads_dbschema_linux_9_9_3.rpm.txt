@@ -1,0 +1,19 @@
+sudo -u root -g root dnf5 --noplugins --forcearch x86_64 install --assumeyes ${HOME}/Downloads/dbschema_linux_9_9_3.rpm
+[sudo] password for ramumsrk: 
+Updating and loading repositories:
+Repositories loaded.
+Package          Arch   Version          Reposit      Size
+Installing:
+ DbSchema        i386   9.9.3-1          @comman 408.0 MiB
+
+Transaction Summary:
+ Installing:         1 package
+
+Total size of inbound packages is 190 MiB. Need to download 0 B.
+After this operation, 408 MiB extra will be used (install 408 MiB, remove 0 B).
+Running transaction
+[1/3] Verify package files      100% |   1.0   B |  00m00s
+[2/3] Prepare transaction       100% |   1.0   B |  00m02s
+[3/3] Installing DbSchema-0:9.9 100% | 407.7 MiB |  00m40s
+Warning: skipped OpenPGP checks for 1 package from repository: @commandline
+Complete!

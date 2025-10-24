@@ -11,9 +11,13 @@
 
 ## [DevOps.dev](https://blog.devops.dev/)
 
-* [Chris Chin](https://medium.com/@it.works)
+### [Chris Chin](https://medium.com/@it.works)
 
 * [How VACUUM and ANALYZE Affect PostgreSQL Query Performance](https://blog.devops.dev/how-vacuum-and-analyze-affect-postgresql-query-performance-6b3b55d62b78)
+
+### [Dbschema Pro](https://medium.com/@dbschema.pro)
+
+* [How to Document a PostgreSQL Schema in 2025](https://blog.devops.dev/how-to-document-a-postgresql-schema-in-2025-d54b0e387a80)
 
 # L
 
@@ -58,6 +62,10 @@
 ### [DbVisualizer](https://medium.com/@marketing_54877)
 
 * [PostgreSQL Upsert with INSERT ON CONFLICT: Clean Inserts and Updates](https://medium.com/the-table-sql-and-devtalk/postgresql-upsert-with-insert-on-conflict-clean-inserts-and-updates-8f720c5cfe6c)
+
+## [Thread Whisperer](https://medium.com/@maahisoft20)
+
+* [Postgres 18 Arrives: 7 Features That Will Change Your Stack](https://medium.com/@maahisoft20/postgres-18-arrives-7-features-that-will-change-your-stack-bc35f79fbe78)
 
 # V
 

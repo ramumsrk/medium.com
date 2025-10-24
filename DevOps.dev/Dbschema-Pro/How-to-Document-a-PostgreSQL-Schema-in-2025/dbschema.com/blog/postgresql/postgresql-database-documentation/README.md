@@ -1,0 +1,1 @@
+# [How to Document a PostgreSQL Schema in 2025](https://dbschema.com/blog/postgresql/postgresql-database-documentation/)
