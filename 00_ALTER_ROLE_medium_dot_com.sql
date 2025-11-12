@@ -1,0 +1,14 @@
+\timing on
+\pset null NULL
+
+ALTER ROLE medium_dot_com
+WITH
+NOCREATEDB
+NOINHERIT
+NOSUPERUSER
+NOREPLICATION
+NOBYPASSRLS
+PASSWORD 'medium_com'
+VALID UNTIL '2025-12-31 23:59:59+05:30';
+
+ALTER ROLE medium_dot_com RENAME TO medium_com;

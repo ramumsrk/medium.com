@@ -1,0 +1,69 @@
+-[ RECORD 1 ]-----+---------------------------------
+user              | postgres
+current_user      | postgres
+session_user      | postgres
+current_role      | postgres
+current_schema    | public
+current_date      | 2025-11-12
+current_time      | 11:19:13.937813+05:30
+current_timestamp | 2025-11-12 11:19:13.937813+05:30
+
+ALTER ROLE
+    rolname     | rolsuper | rolinherit | rolcreaterole | rolcreatedb | rolcanlogin | rolreplication | rolconnlimit | rolpassword |       rolvaliduntil       | rolbypassrls | rolconfig |  oid  
+----------------+----------+------------+---------------+-------------+-------------+----------------+--------------+-------------+---------------------------+--------------+-----------+-------
+ medium_dot_com | f        | f          | f             | f           | t           | f              |           -1 | ********    | 2025-12-31 23:59:59+05:30 | f            | NULL      | 16387
+(1 row)
+
+ALTER ROLE
+  oid  |  rolname   | rolsuper | rolinherit | rolcreaterole | rolcreatedb | rolcanlogin | rolreplication | rolbypassrls | rolconnlimit |                                                              rolpassword                                                              |       rolvaliduntil       
+-------+------------+----------+------------+---------------+-------------+-------------+----------------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------------
+ 16387 | medium_com | f        | f          | f             | f           | t           | f              | f            |           -1 | SCRAM-SHA-256$4096:ghrr0NiBF/Unl5KF/5/pVg==$WkyUQ+94/kVg6gCzyDB+oCnqzOBBsV5nEn8uo/u04j8=:19VPh7P6Z17VU30viif32PlLnBkbCE7jwPAPoihf8xg= | 2025-12-31 23:59:59+05:30
+(1 row)
+
+  oid  |    datname     | datdba | encoding | datlocprovider | datistemplate | datallowconn | dathasloginevt | datconnlimit | datfrozenxid | datminmxid | dattablespace | datcollate  |  datctype   | datlocale | daticurules | datcollversion | datacl 
+-------+----------------+--------+----------+----------------+---------------+--------------+----------------+--------------+--------------+------------+---------------+-------------+-------------+-----------+-------------+----------------+--------
+ 16392 | medium_dot_com |  16387 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         16390 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.42           | NULL
+(1 row)
+
+ALTER DATABASE
+ALTER DATABASE
+-[ RECORD 1 ]--+------------
+oid            | 16392
+datname        | medium_com
+datdba         | 16387
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 16390
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+
+-[ RECORD 1 ]-----------------
+spcname | medium_dot_com_data
+-[ RECORD 2 ]-----------------
+spcname | medium_dot_com_index
+
+ALTER TABLESPACE
+ALTER TABLESPACE
+-[ RECORD 1 ]-------------
+spcname | medium_com_data
+-[ RECORD 2 ]-------------
+spcname | medium_com_index
+
+CREATE TABLESPACE
+-[ RECORD 1 ]-------------
+spcname | medium_com_data
+-[ RECORD 2 ]-------------
+spcname | medium_com_index
+-[ RECORD 3 ]-------------
+spcname | medium_com_temp
+
