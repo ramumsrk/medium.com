@@ -1,0 +1,369 @@
+/******** QUERY *********/
+SELECT USER, CURRENT_USER, SESSION_USER, CURRENT_ROLE, CURRENT_SCHEMA, CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP
+/************************/
+
+    user    | current_user | session_user | current_role | current_schema | current_date |     current_time      |        current_timestamp         
+------------+--------------+--------------+--------------+----------------+--------------+-----------------------+----------------------------------
+ medium_com | medium_com   | medium_com   | medium_com   | public         | 2025-11-12   | 12:05:10.269162+05:30 | 2025-11-12 12:05:10.269162+05:30
+(1 row)
+
+/******** QUERY *********/
+CREATE SCHEMA IF NOT EXISTS medium_com AUTHORIZATION medium_com
+/************************/
+
+CREATE SCHEMA
+/******** QUERY *********/
+CREATE SCHEMA IF NOT EXISTS stormatics_medium_com AUTHORIZATION medium_com
+/************************/
+
+CREATE SCHEMA
+                                                List of roles
+             Role name             |                         Attributes                         | Description 
+-----------------------------------+------------------------------------------------------------+-------------
+ adventure_works                   | No inheritance, Create DB, Cannot login                    | 
+ databaserookies_wordpress_com     | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ hr_manager                        | No inheritance                                             | 
+ medium_com                        | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ northwind                         | No inheritance, Create DB                                  | 
+ pagila                            | No inheritance, Create DB                                  | 
+ pgpedia_info                      |                                                            | 
+ postgres                          | Superuser, Create role, Create DB, Replication, Bypass RLS | 
+ practice                          | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ usda                              | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ www_crunchydata_com               | No inheritance                                             | 
+ www_cybertec_postgresql_com       | No inheritance                                             | 
+ www_dot_linkedin_dot_com_learning | Create role, Create DB                                     | 
+ www_dot_postgresql_dot_org        | Create DB                                                  | 
+
+                                                List of roles
+             Role name             |                         Attributes                         | Description 
+-----------------------------------+------------------------------------------------------------+-------------
+ adventure_works                   | No inheritance, Create DB, Cannot login                    | 
+ databaserookies_wordpress_com     | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ hr_manager                        | No inheritance                                             | 
+ medium_com                        | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ northwind                         | No inheritance, Create DB                                  | 
+ pagila                            | No inheritance, Create DB                                  | 
+ pgpedia_info                      |                                                            | 
+ postgres                          | Superuser, Create role, Create DB, Replication, Bypass RLS | 
+ practice                          | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ usda                              | No inheritance                                            +| 
+                                   | Password valid until 2025-12-31 23:59:59+05:30             | 
+ www_crunchydata_com               | No inheritance                                             | 
+ www_cybertec_postgresql_com       | No inheritance                                             | 
+ www_dot_linkedin_dot_com_learning | Create role, Create DB                                     | 
+ www_dot_postgresql_dot_org        | Create DB                                                  | 
+
+                                               List of schemas
+         Name          |       Owner       |           Access privileges            |      Description       
+-----------------------+-------------------+----------------------------------------+------------------------
+ anjuman_bhattacharyya | medium_com        | NULL                                   | NULL
+ azlan_jamal           | medium_com        | NULL                                   | NULL
+ dbvisualizer          | medium_com        | NULL                                   | NULL
+ itsuki                | medium_com        | NULL                                   | NULL
+ juan_andrés_leiva     | medium_com        | NULL                                   | NULL
+ m_ali_khan            | medium_com        | NULL                                   | NULL
+ medium_com            | medium_com        | NULL                                   | NULL
+ neil_ghosh            | medium_com        | NULL                                   | NULL
+ priyanshu_rajput      | medium_com        | NULL                                   | NULL
+ public                | pg_database_owner | pg_database_owner=UC/pg_database_owner+| standard public schema
+                       |                   | =U/pg_database_owner                   | 
+ shailesh_kumar_mishra | medium_com        | NULL                                   | NULL
+ stormatics_medium_com | medium_com        | NULL                                   | NULL
+ thread_whisperer      | medium_com        | NULL                                   | NULL
+ tomasz_gintowt        | medium_com        | NULL                                   | NULL
+ vedant_thakkar        | medium_com        | NULL                                   | NULL
+(15 rows)
+
+                                                Table "pg_catalog.pg_class"
+       Column        |     Type     | Collation | Nullable | Default | Storage  | Compression | Stats target | Description 
+---------------------+--------------+-----------+----------+---------+----------+-------------+--------------+-------------
+ oid                 | oid          |           | not null |         | plain    |             |              | 
+ relname             | name         |           | not null |         | plain    |             |              | 
+ relnamespace        | oid          |           | not null |         | plain    |             |              | 
+ reltype             | oid          |           | not null |         | plain    |             |              | 
+ reloftype           | oid          |           | not null |         | plain    |             |              | 
+ relowner            | oid          |           | not null |         | plain    |             |              | 
+ relam               | oid          |           | not null |         | plain    |             |              | 
+ relfilenode         | oid          |           | not null |         | plain    |             |              | 
+ reltablespace       | oid          |           | not null |         | plain    |             |              | 
+ relpages            | integer      |           | not null |         | plain    |             |              | 
+ reltuples           | real         |           | not null |         | plain    |             |              | 
+ relallvisible       | integer      |           | not null |         | plain    |             |              | 
+ relallfrozen        | integer      |           | not null |         | plain    |             |              | 
+ reltoastrelid       | oid          |           | not null |         | plain    |             |              | 
+ relhasindex         | boolean      |           | not null |         | plain    |             |              | 
+ relisshared         | boolean      |           | not null |         | plain    |             |              | 
+ relpersistence      | "char"       |           | not null |         | plain    |             |              | 
+ relkind             | "char"       |           | not null |         | plain    |             |              | 
+ relnatts            | smallint     |           | not null |         | plain    |             |              | 
+ relchecks           | smallint     |           | not null |         | plain    |             |              | 
+ relhasrules         | boolean      |           | not null |         | plain    |             |              | 
+ relhastriggers      | boolean      |           | not null |         | plain    |             |              | 
+ relhassubclass      | boolean      |           | not null |         | plain    |             |              | 
+ relrowsecurity      | boolean      |           | not null |         | plain    |             |              | 
+ relforcerowsecurity | boolean      |           | not null |         | plain    |             |              | 
+ relispopulated      | boolean      |           | not null |         | plain    |             |              | 
+ relreplident        | "char"       |           | not null |         | plain    |             |              | 
+ relispartition      | boolean      |           | not null |         | plain    |             |              | 
+ relrewrite          | oid          |           | not null |         | plain    |             |              | 
+ relfrozenxid        | xid          |           | not null |         | plain    |             |              | 
+ relminmxid          | xid          |           | not null |         | plain    |             |              | 
+ relacl              | aclitem[]    |           |          |         | extended |             |              | 
+ reloptions          | text[]       | C         |          |         | extended |             |              | 
+ relpartbound        | pg_node_tree | C         |          |         | extended |             |              | 
+Indexes:
+    "pg_class_oid_index" PRIMARY KEY, btree (oid)
+    "pg_class_relname_nsp_index" UNIQUE CONSTRAINT, btree (relname, relnamespace)
+    "pg_class_tblspc_relfilenode_index" btree (reltablespace, relfilenode)
+Not-null constraints:
+    "pg_class_oid_not_null" NOT NULL "oid"
+Access method: heap
+
+              List of schemas
+         Name          |       Owner       
+-----------------------+-------------------
+ anjuman_bhattacharyya | medium_com
+ azlan_jamal           | medium_com
+ dbvisualizer          | medium_com
+ itsuki                | medium_com
+ juan_andrés_leiva     | medium_com
+ m_ali_khan            | medium_com
+ medium_com            | medium_com
+ neil_ghosh            | medium_com
+ priyanshu_rajput      | medium_com
+ public                | pg_database_owner
+ shailesh_kumar_mishra | medium_com
+ stormatics_medium_com | medium_com
+ thread_whisperer      | medium_com
+ tomasz_gintowt        | medium_com
+ vedant_thakkar        | medium_com
+(15 rows)
+
+                                                        List of installed extensions
+        Name        | Version | Default version |      Schema      |                              Description                               
+--------------------+---------+-----------------+------------------+------------------------------------------------------------------------
+ pg_stat_statements | 1.12    | 1.12            | priyanshu_rajput | track planning and execution statistics of all SQL statements executed
+ plpgsql            | 1.0     | 1.0             | pg_catalog       | PL/pgSQL procedural language
+(2 rows)
+
+                 Objects in extension "pg_stat_statements"
+                             Object description                             
+----------------------------------------------------------------------------
+ function priyanshu_rajput.pg_stat_statements(boolean)
+ function priyanshu_rajput.pg_stat_statements_info()
+ function priyanshu_rajput.pg_stat_statements_reset(oid,oid,bigint,boolean)
+ type priyanshu_rajput.pg_stat_statements
+ type priyanshu_rajput.pg_stat_statements[]
+ type priyanshu_rajput.pg_stat_statements_info
+ type priyanshu_rajput.pg_stat_statements_info[]
+ view priyanshu_rajput.pg_stat_statements
+ view priyanshu_rajput.pg_stat_statements_info
+(9 rows)
+
+      Objects in extension "plpgsql"
+            Object description             
+-------------------------------------------
+ function plpgsql_call_handler()
+ function plpgsql_inline_handler(internal)
+ function plpgsql_validator(oid)
+ language plpgsql
+(4 rows)
+
+                 Objects in extension "pg_stat_statements"
+                             Object description                             
+----------------------------------------------------------------------------
+ function priyanshu_rajput.pg_stat_statements(boolean)
+ function priyanshu_rajput.pg_stat_statements_info()
+ function priyanshu_rajput.pg_stat_statements_reset(oid,oid,bigint,boolean)
+ type priyanshu_rajput.pg_stat_statements
+ type priyanshu_rajput.pg_stat_statements[]
+ type priyanshu_rajput.pg_stat_statements_info
+ type priyanshu_rajput.pg_stat_statements_info[]
+ view priyanshu_rajput.pg_stat_statements
+ view priyanshu_rajput.pg_stat_statements_info
+(9 rows)
+
+      Objects in extension "plpgsql"
+            Object description             
+-------------------------------------------
+ function plpgsql_call_handler()
+ function plpgsql_inline_handler(internal)
+ function plpgsql_validator(oid)
+ language plpgsql
+(4 rows)
+
+/******** QUERY *********/
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA medium_com VERSION '1.12' CASCADE
+/************************/
+
+CREATE EXTENSION
+                 Objects in extension "pg_stat_statements"
+                             Object description                             
+----------------------------------------------------------------------------
+ function priyanshu_rajput.pg_stat_statements(boolean)
+ function priyanshu_rajput.pg_stat_statements_info()
+ function priyanshu_rajput.pg_stat_statements_reset(oid,oid,bigint,boolean)
+ type priyanshu_rajput.pg_stat_statements
+ type priyanshu_rajput.pg_stat_statements[]
+ type priyanshu_rajput.pg_stat_statements_info
+ type priyanshu_rajput.pg_stat_statements_info[]
+ view priyanshu_rajput.pg_stat_statements
+ view priyanshu_rajput.pg_stat_statements_info
+(9 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_stat_statements LIMIT 1
+/************************/
+
+/******** QUERY *********/
+SELECT * FROM priyanshu_rajput.pg_stat_statements LIMIT 1
+/************************/
+
+ userid | dbid  | toplevel |       queryid       |                                query                                 | plans | total_plan_time | min_plan_time | max_plan_time | mean_plan_time | stddev_plan_time | calls | total_exec_time | min_exec_time |   max_exec_time    |   mean_exec_time   |  stddev_exec_time   | rows | shared_blks_hit | shared_blks_read | shared_blks_dirtied | shared_blks_written | local_blks_hit | local_blks_read | local_blks_dirtied | local_blks_written | temp_blks_read | temp_blks_written | shared_blk_read_time | shared_blk_write_time | local_blk_read_time | local_blk_write_time | temp_blk_read_time | temp_blk_write_time | wal_records | wal_fpi | wal_bytes | wal_buffers_full | jit_functions | jit_generation_time | jit_inlining_count | jit_inlining_time | jit_optimization_count | jit_optimization_time | jit_emission_count | jit_emission_time | jit_deform_count | jit_deform_time | parallel_workers_to_launch | parallel_workers_launched |           stats_since            |        minmax_stats_since        
+--------+-------+----------+---------------------+----------------------------------------------------------------------+-------+-----------------+---------------+---------------+----------------+------------------+-------+-----------------+---------------+--------------------+--------------------+---------------------+------+-----------------+------------------+---------------------+---------------------+----------------+-----------------+--------------------+--------------------+----------------+-------------------+----------------------+-----------------------+---------------------+----------------------+--------------------+---------------------+-------------+---------+-----------+------------------+---------------+---------------------+--------------------+-------------------+------------------------+-----------------------+--------------------+-------------------+------------------+-----------------+----------------------------+---------------------------+----------------------------------+----------------------------------
+  16387 | 16392 | t        | 4098178362383228795 | SELECT c.oid,                                                       +|     0 |               0 |             0 |             0 |              0 |                0 |     3 |        2.676943 |      0.546695 | 1.1028959999999999 | 0.8923143333333333 | 0.24632805587174905 |    1 |              43 |                0 |                   0 |                   0 |              0 |               0 |                  0 |                  0 |              0 |                 0 |                    0 |                     0 |                   0 |                    0 |                  0 |                   0 |           0 |       0 |         0 |                0 |             0 |                   0 |                  0 |                 0 |                      0 |                     0 |                  0 |                 0 |                0 |               0 |                          0 |                         0 | 2025-11-12 13:13:20.479224+05:30 | 2025-11-12 13:13:20.479224+05:30
+        |       |          |                     |   n.nspname,                                                        +|       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+        |       |          |                     |   c.relname                                                         +|       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+        |       |          |                     | FROM pg_catalog.pg_class c                                          +|       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+        |       |          |                     |      LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace  +|       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+        |       |          |                     | WHERE c.relname OPERATOR(pg_catalog.~) $1 COLLATE pg_catalog.default+|       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+        |       |          |                     |   AND n.nspname OPERATOR(pg_catalog.~) $2 COLLATE pg_catalog.default+|       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+        |       |          |                     | ORDER BY 2, 3                                                        |       |                 |               |               |                |                  |       |                 |               |                    |                    |                     |      |                 |                  |                     |                     |                |                 |                    |                    |                |                   |                      |                       |                     |                      |                    |                     |             |         |           |                  |               |                     |                    |                   |                        |                       |                    |                   |                  |                 |                            |                           |                                  | 
+(1 row)
+
+                                               List of relations
+      Schema      |        Name        | Type |  Owner   | Persistence | Access method |  Size   | Description 
+------------------+--------------------+------+----------+-------------+---------------+---------+-------------
+ priyanshu_rajput | pg_stat_statements | view | postgres | permanent   | NULL          | 0 bytes | NULL
+(1 row)
+
+                                         List of views
+      Schema      |        Name        | Type |  Owner   | Persistence |  Size   | Description 
+------------------+--------------------+------+----------+-------------+---------+-------------
+ priyanshu_rajput | pg_stat_statements | view | postgres | permanent   | 0 bytes | NULL
+(1 row)
+
+                                         List of views
+      Schema      |        Name        | Type |  Owner   | Persistence |  Size   | Description 
+------------------+--------------------+------+----------+-------------+---------+-------------
+ priyanshu_rajput | pg_stat_statements | view | postgres | permanent   | 0 bytes | NULL
+(1 row)
+
+                                   View "priyanshu_rajput.pg_stat_statements"
+           Column           |           Type           | Collation | Nullable | Default | Storage  | Description 
+----------------------------+--------------------------+-----------+----------+---------+----------+-------------
+ userid                     | oid                      |           |          |         | plain    | 
+ dbid                       | oid                      |           |          |         | plain    | 
+ toplevel                   | boolean                  |           |          |         | plain    | 
+ queryid                    | bigint                   |           |          |         | plain    | 
+ query                      | text                     |           |          |         | extended | 
+ plans                      | bigint                   |           |          |         | plain    | 
+ total_plan_time            | double precision         |           |          |         | plain    | 
+ min_plan_time              | double precision         |           |          |         | plain    | 
+ max_plan_time              | double precision         |           |          |         | plain    | 
+ mean_plan_time             | double precision         |           |          |         | plain    | 
+ stddev_plan_time           | double precision         |           |          |         | plain    | 
+ calls                      | bigint                   |           |          |         | plain    | 
+ total_exec_time            | double precision         |           |          |         | plain    | 
+ min_exec_time              | double precision         |           |          |         | plain    | 
+ max_exec_time              | double precision         |           |          |         | plain    | 
+ mean_exec_time             | double precision         |           |          |         | plain    | 
+ stddev_exec_time           | double precision         |           |          |         | plain    | 
+ rows                       | bigint                   |           |          |         | plain    | 
+ shared_blks_hit            | bigint                   |           |          |         | plain    | 
+ shared_blks_read           | bigint                   |           |          |         | plain    | 
+ shared_blks_dirtied        | bigint                   |           |          |         | plain    | 
+ shared_blks_written        | bigint                   |           |          |         | plain    | 
+ local_blks_hit             | bigint                   |           |          |         | plain    | 
+ local_blks_read            | bigint                   |           |          |         | plain    | 
+ local_blks_dirtied         | bigint                   |           |          |         | plain    | 
+ local_blks_written         | bigint                   |           |          |         | plain    | 
+ temp_blks_read             | bigint                   |           |          |         | plain    | 
+ temp_blks_written          | bigint                   |           |          |         | plain    | 
+ shared_blk_read_time       | double precision         |           |          |         | plain    | 
+ shared_blk_write_time      | double precision         |           |          |         | plain    | 
+ local_blk_read_time        | double precision         |           |          |         | plain    | 
+ local_blk_write_time       | double precision         |           |          |         | plain    | 
+ temp_blk_read_time         | double precision         |           |          |         | plain    | 
+ temp_blk_write_time        | double precision         |           |          |         | plain    | 
+ wal_records                | bigint                   |           |          |         | plain    | 
+ wal_fpi                    | bigint                   |           |          |         | plain    | 
+ wal_bytes                  | numeric                  |           |          |         | main     | 
+ wal_buffers_full           | bigint                   |           |          |         | plain    | 
+ jit_functions              | bigint                   |           |          |         | plain    | 
+ jit_generation_time        | double precision         |           |          |         | plain    | 
+ jit_inlining_count         | bigint                   |           |          |         | plain    | 
+ jit_inlining_time          | double precision         |           |          |         | plain    | 
+ jit_optimization_count     | bigint                   |           |          |         | plain    | 
+ jit_optimization_time      | double precision         |           |          |         | plain    | 
+ jit_emission_count         | bigint                   |           |          |         | plain    | 
+ jit_emission_time          | double precision         |           |          |         | plain    | 
+ jit_deform_count           | bigint                   |           |          |         | plain    | 
+ jit_deform_time            | double precision         |           |          |         | plain    | 
+ parallel_workers_to_launch | bigint                   |           |          |         | plain    | 
+ parallel_workers_launched  | bigint                   |           |          |         | plain    | 
+ stats_since                | timestamp with time zone |           |          |         | plain    | 
+ minmax_stats_since         | timestamp with time zone |           |          |         | plain    | 
+View definition:
+ SELECT userid,
+    dbid,
+    toplevel,
+    queryid,
+    query,
+    plans,
+    total_plan_time,
+    min_plan_time,
+    max_plan_time,
+    mean_plan_time,
+    stddev_plan_time,
+    calls,
+    total_exec_time,
+    min_exec_time,
+    max_exec_time,
+    mean_exec_time,
+    stddev_exec_time,
+    rows,
+    shared_blks_hit,
+    shared_blks_read,
+    shared_blks_dirtied,
+    shared_blks_written,
+    local_blks_hit,
+    local_blks_read,
+    local_blks_dirtied,
+    local_blks_written,
+    temp_blks_read,
+    temp_blks_written,
+    shared_blk_read_time,
+    shared_blk_write_time,
+    local_blk_read_time,
+    local_blk_write_time,
+    temp_blk_read_time,
+    temp_blk_write_time,
+    wal_records,
+    wal_fpi,
+    wal_bytes,
+    wal_buffers_full,
+    jit_functions,
+    jit_generation_time,
+    jit_inlining_count,
+    jit_inlining_time,
+    jit_optimization_count,
+    jit_optimization_time,
+    jit_emission_count,
+    jit_emission_time,
+    jit_deform_count,
+    jit_deform_time,
+    parallel_workers_to_launch,
+    parallel_workers_launched,
+    stats_since,
+    minmax_stats_since
+   FROM priyanshu_rajput.pg_stat_statements(true) pg_stat_statements(userid, dbid, toplevel, queryid, query, plans, total_plan_time, min_plan_time, max_plan_time, mean_plan_time, stddev_plan_time, calls, total_exec_time, min_exec_time, max_exec_time, mean_exec_time, stddev_exec_time, rows, shared_blks_hit, shared_blks_read, shared_blks_dirtied, shared_blks_written, local_blks_hit, local_blks_read, local_blks_dirtied, local_blks_written, temp_blks_read, temp_blks_written, shared_blk_read_time, shared_blk_write_time, local_blk_read_time, local_blk_write_time, temp_blk_read_time, temp_blk_write_time, wal_records, wal_fpi, wal_bytes, wal_buffers_full, jit_functions, jit_generation_time, jit_inlining_count, jit_inlining_time, jit_optimization_count, jit_optimization_time, jit_emission_count, jit_emission_time, jit_deform_count, jit_deform_time, parallel_workers_to_launch, parallel_workers_launched, stats_since, minmax_stats_since);
+

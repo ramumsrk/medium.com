@@ -1,0 +1,312 @@
+/******** QUERY *********/
+SELECT USER, CURRENT_USER, SESSION_USER, CURRENT_ROLE, CURRENT_SCHEMA, CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP
+/************************/
+
+   user   | current_user | session_user | current_role | current_schema | current_date |     current_time      |        current_timestamp         
+----------+--------------+--------------+--------------+----------------+--------------+-----------------------+----------------------------------
+ postgres | postgres     | postgres     | postgres     | public         | 2025-11-12   | 12:35:39.373376+05:30 | 2025-11-12 12:35:39.373376+05:30
+(1 row)
+
+/******** QUERY *********/
+SELECT table_name FROM information_schema.tables WHERE table_schema = 'pg_catalog' ORDER BY table_name ASC
+/************************/
+
+           table_name            
+---------------------------------
+ pg_aggregate
+ pg_aios
+ pg_am
+ pg_amop
+ pg_amproc
+ pg_attrdef
+ pg_attribute
+ pg_auth_members
+ pg_authid
+ pg_available_extension_versions
+ pg_available_extensions
+ pg_backend_memory_contexts
+ pg_cast
+ pg_class
+ pg_collation
+ pg_config
+ pg_constraint
+ pg_conversion
+ pg_cursors
+ pg_database
+ pg_db_role_setting
+ pg_default_acl
+ pg_depend
+ pg_description
+ pg_enum
+ pg_event_trigger
+ pg_extension
+ pg_file_settings
+ pg_foreign_data_wrapper
+ pg_foreign_server
+ pg_foreign_table
+ pg_group
+ pg_hba_file_rules
+ pg_ident_file_mappings
+ pg_index
+ pg_indexes
+ pg_inherits
+ pg_init_privs
+ pg_language
+ pg_largeobject
+ pg_largeobject_metadata
+ pg_locks
+ pg_matviews
+ pg_namespace
+ pg_opclass
+ pg_operator
+ pg_opfamily
+ pg_parameter_acl
+ pg_partitioned_table
+ pg_policies
+ pg_policy
+ pg_prepared_statements
+ pg_prepared_xacts
+ pg_proc
+ pg_publication
+ pg_publication_namespace
+ pg_publication_rel
+ pg_publication_tables
+ pg_range
+ pg_replication_origin
+ pg_replication_origin_status
+ pg_replication_slots
+ pg_rewrite
+ pg_roles
+ pg_rules
+ pg_seclabel
+ pg_seclabels
+ pg_sequence
+ pg_sequences
+ pg_settings
+ pg_shadow
+ pg_shdepend
+ pg_shdescription
+ pg_shmem_allocations
+ pg_shmem_allocations_numa
+ pg_shseclabel
+ pg_stat_activity
+ pg_stat_all_indexes
+ pg_stat_all_tables
+ pg_stat_archiver
+ pg_stat_bgwriter
+ pg_stat_checkpointer
+ pg_stat_database
+ pg_stat_database_conflicts
+ pg_stat_gssapi
+ pg_stat_io
+ pg_stat_progress_analyze
+ pg_stat_progress_basebackup
+ pg_stat_progress_cluster
+ pg_stat_progress_copy
+ pg_stat_progress_create_index
+ pg_stat_progress_vacuum
+ pg_stat_recovery_prefetch
+ pg_stat_replication
+ pg_stat_replication_slots
+ pg_stat_slru
+ pg_stat_ssl
+ pg_stat_subscription
+ pg_stat_subscription_stats
+ pg_stat_sys_indexes
+ pg_stat_sys_tables
+ pg_stat_user_functions
+ pg_stat_user_indexes
+ pg_stat_user_tables
+ pg_stat_wal
+ pg_stat_wal_receiver
+ pg_stat_xact_all_tables
+ pg_stat_xact_sys_tables
+ pg_stat_xact_user_functions
+ pg_stat_xact_user_tables
+ pg_statio_all_indexes
+ pg_statio_all_sequences
+ pg_statio_all_tables
+ pg_statio_sys_indexes
+ pg_statio_sys_sequences
+ pg_statio_sys_tables
+ pg_statio_user_indexes
+ pg_statio_user_sequences
+ pg_statio_user_tables
+ pg_statistic
+ pg_statistic_ext
+ pg_statistic_ext_data
+ pg_stats
+ pg_stats_ext
+ pg_stats_ext_exprs
+ pg_subscription
+ pg_subscription_rel
+ pg_tables
+ pg_tablespace
+ pg_timezone_abbrevs
+ pg_timezone_names
+ pg_transform
+ pg_trigger
+ pg_ts_config
+ pg_ts_config_map
+ pg_ts_dict
+ pg_ts_parser
+ pg_ts_template
+ pg_type
+ pg_user
+ pg_user_mapping
+ pg_user_mappings
+ pg_views
+ pg_wait_events
+(144 rows)
+
+                                          List of tables
+   Schema   |     Name     | Type  |  Owner   | Persistence | Access method | Size  | Description 
+------------+--------------+-------+----------+-------------+---------------+-------+-------------
+ pg_catalog | pg_extension | table | postgres | permanent   | heap          | 48 kB | NULL
+(1 row)
+
+                                         Table "pg_catalog.pg_extension"
+     Column     |  Type   | Collation | Nullable | Default | Storage  | Compression | Stats target | Description 
+----------------+---------+-----------+----------+---------+----------+-------------+--------------+-------------
+ oid            | oid     |           | not null |         | plain    |             |              | 
+ extname        | name    |           | not null |         | plain    |             |              | 
+ extowner       | oid     |           | not null |         | plain    |             |              | 
+ extnamespace   | oid     |           | not null |         | plain    |             |              | 
+ extrelocatable | boolean |           | not null |         | plain    |             |              | 
+ extversion     | text    | C         | not null |         | extended |             |              | 
+ extconfig      | oid[]   |           |          |         | extended |             |              | 
+ extcondition   | text[]  | C         |          |         | extended |             |              | 
+Indexes:
+    "pg_extension_oid_index" PRIMARY KEY, btree (oid)
+    "pg_extension_name_index" UNIQUE CONSTRAINT, btree (extname)
+Not-null constraints:
+    "pg_extension_oid_not_null" NOT NULL "oid"
+Access method: heap
+
+                     View "pg_catalog.pg_available_extensions"
+      Column       | Type | Collation | Nullable | Default | Storage  | Description 
+-------------------+------+-----------+----------+---------+----------+-------------
+ name              | name |           |          |         | plain    | 
+ default_version   | text |           |          |         | extended | 
+ installed_version | text | C         |          |         | extended | 
+ comment           | text |           |          |         | extended | 
+View definition:
+ SELECT e.name,
+    e.default_version,
+    x.extversion AS installed_version,
+    e.comment
+   FROM pg_available_extensions() e(name, default_version, comment)
+     LEFT JOIN pg_extension x ON e.name = x.extname;
+
+                                        List of views
+   Schema   |          Name           | Type |  Owner   | Persistence |  Size   | Description 
+------------+-------------------------+------+----------+-------------+---------+-------------
+ pg_catalog | pg_available_extensions | view | postgres | permanent   | 0 bytes | NULL
+(1 row)
+
+                View "pg_catalog.pg_available_extension_versions"
+   Column    |  Type   | Collation | Nullable | Default | Storage  | Description 
+-------------+---------+-----------+----------+---------+----------+-------------
+ name        | name    |           |          |         | plain    | 
+ version     | text    |           |          |         | extended | 
+ installed   | boolean |           |          |         | plain    | 
+ superuser   | boolean |           |          |         | plain    | 
+ trusted     | boolean |           |          |         | plain    | 
+ relocatable | boolean |           |          |         | plain    | 
+ schema      | name    |           |          |         | plain    | 
+ requires    | name[]  |           |          |         | extended | 
+ comment     | text    |           |          |         | extended | 
+View definition:
+ SELECT e.name,
+    e.version,
+    x.extname IS NOT NULL AS installed,
+    e.superuser,
+    e.trusted,
+    e.relocatable,
+    e.schema,
+    e.requires,
+    e.comment
+   FROM pg_available_extension_versions() e(name, version, superuser, trusted, relocatable, schema, requires, comment)
+     LEFT JOIN pg_extension x ON e.name = x.extname AND e.version = x.extversion;
+
+                                            List of views
+   Schema   |              Name               | Type |  Owner   | Persistence |  Size   | Description 
+------------+---------------------------------+------+----------+-------------+---------+-------------
+ pg_catalog | pg_available_extension_versions | view | postgres | permanent   | 0 bytes | NULL
+(1 row)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_extension WHERE extname = 'pg_stat_statements'
+/************************/
+
+ oid | extname | extowner | extnamespace | extrelocatable | extversion | extconfig | extcondition 
+-----+---------+----------+--------------+----------------+------------+-----------+--------------
+(0 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extensions WHERE extname = 'pg_stat_statements'
+/************************/
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extensions WHERE name = 'pg_stat_statements'
+/************************/
+
+        name        | default_version | installed_version |                                comment                                 
+--------------------+-----------------+-------------------+------------------------------------------------------------------------
+ pg_stat_statements | 1.12            | NULL              | track planning and execution statistics of all SQL statements executed
+(1 row)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name = 'pg_stat_statements'
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable | schema | requires |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+--------+----------+------------------------------------------------------------------------
+ pg_stat_statements | 1.4     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.10    | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.11    | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.12    | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.5     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.6     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.7     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.8     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.9     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+(9 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_available_extension_versions WHERE name = 'pg_stat_statements' ORDER BY version::double precision DESC
+/************************/
+
+        name        | version | installed | superuser | trusted | relocatable | schema | requires |                                comment                                 
+--------------------+---------+-----------+-----------+---------+-------------+--------+----------+------------------------------------------------------------------------
+ pg_stat_statements | 1.9     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.8     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.7     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.6     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.5     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.4     | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.12    | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.11    | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+ pg_stat_statements | 1.10    | f         | t         | f       | t           | NULL   | NULL     | track planning and execution statistics of all SQL statements executed
+(9 rows)
+
+/******** QUERY *********/
+SELECT DISTINCT table_schema FROM information_schema.tables WHERE table_catalog = 'medium_com' AND table_owner = 'medium_com'
+/************************/
+
+/******** QUERY *********/
+SELECT DISTINCT table_schema FROM information_schema.tables WHERE table_catalog = 'medium_com'
+/************************/
+
+ table_schema 
+--------------
+(0 rows)
+
+/******** QUERY *********/
+SELECT DISTINCT table_schema FROM information_schema.tables WHERE table_catalog = 'medium_dot_com'
+/************************/
+
+ table_schema 
+--------------
+(0 rows)
+
