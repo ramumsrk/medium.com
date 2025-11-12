@@ -73,6 +73,10 @@
 
 # S
 
+## [STORMATICS](https://stormatics.medium.com/)
+
+* [Enhancing PostgreSQL Performance Monitoring: A Comprehensive Guide to pg_stat_statements](https://stormatics.medium.com/enhancing-postgresql-performance-monitoring-a-comprehensive-guide-to-pg-stat-statements-4d9e71f11ba9)
+
 ## [Saurabh Sethia](https://medium.com/@saurabhs13)
 
 * [PostgreSQL Experiments: How it Stores Data and Why Indexes Make Queries So Fast](https://medium.com/@saurabhs13/postgresql-experiments-how-data-is-stored-and-why-indexes-make-queries-so-fast-61bf978e6a42)
