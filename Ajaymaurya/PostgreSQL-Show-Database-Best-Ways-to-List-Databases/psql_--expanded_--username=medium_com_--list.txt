@@ -1,0 +1,173 @@
+List of databases
+-[ RECORD 1 ]-----+----------------------------------
+Name              | adventure_works
+Owner             | adventure_works
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 2 ]-----+----------------------------------
+Name              | colors
+Owner             | www_dot_linkedin_dot_com_learning
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 3 ]-----+----------------------------------
+Name              | databaserookies_wordpress_com
+Owner             | databaserookies_wordpress_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 4 ]-----+----------------------------------
+Name              | fruits
+Owner             | www_dot_linkedin_dot_com_learning
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 5 ]-----+----------------------------------
+Name              | kineteco
+Owner             | www_dot_linkedin_dot_com_learning
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 6 ]-----+----------------------------------
+Name              | medium_com
+Owner             | medium_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 7 ]-----+----------------------------------
+Name              | northwind
+Owner             | northwind
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 8 ]-----+----------------------------------
+Name              | pagila
+Owner             | pagila
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 9 ]-----+----------------------------------
+Name              | pgpedia_info
+Owner             | pgpedia_info
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 10 ]----+----------------------------------
+Name              | postgres
+Owner             | postgres
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 11 ]----+----------------------------------
+Name              | practice
+Owner             | practice
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 12 ]----+----------------------------------
+Name              | template0
+Owner             | postgres
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | =c/postgres                      +
+                  | postgres=CTc/postgres
+-[ RECORD 13 ]----+----------------------------------
+Name              | template1
+Owner             | postgres
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | =c/postgres                      +
+                  | postgres=CTc/postgres
+-[ RECORD 14 ]----+----------------------------------
+Name              | usda
+Owner             | usda
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 15 ]----+----------------------------------
+Name              | www_crunchydata_com
+Owner             | www_crunchydata_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 16 ]----+----------------------------------
+Name              | www_cybertec_postgresql_com
+Owner             | www_cybertec_postgresql_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 
+-[ RECORD 17 ]----+----------------------------------
+Name              | www_postgresql_org
+Owner             | www_postgresql_org
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | 
+ICU Rules         | 
+Access privileges | 

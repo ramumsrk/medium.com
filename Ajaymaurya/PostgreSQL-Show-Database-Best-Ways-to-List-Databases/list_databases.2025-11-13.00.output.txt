@@ -1,0 +1,559 @@
+-[ RECORD 1 ]-----+---------------------------------
+user              | medium_com
+current_user      | medium_com
+session_user      | medium_com
+current_role      | medium_com
+current_schema    | medium_com
+current_date      | 2025-11-13
+current_time      | 12:07:40.446481+05:30
+current_timestamp | 2025-11-13 12:07:40.446481+05:30
+
+List of databases
+-[ RECORD 1 ]-----+-------------------------------------------
+Name              | adventure_works
+Owner             | adventure_works
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 8102 kB
+Tablespace        | adventure_works_data
+Description       | NULL
+-[ RECORD 2 ]-----+-------------------------------------------
+Name              | colors
+Owner             | www_dot_linkedin_dot_com_learning
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7841 kB
+Tablespace        | www_dot_linkedin_dot_com_learning_data
+Description       | NULL
+-[ RECORD 3 ]-----+-------------------------------------------
+Name              | databaserookies_wordpress_com
+Owner             | databaserookies_wordpress_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7974 kB
+Tablespace        | databaserookies_wordpress_com_data
+Description       | NULL
+-[ RECORD 4 ]-----+-------------------------------------------
+Name              | fruits
+Owner             | www_dot_linkedin_dot_com_learning
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7857 kB
+Tablespace        | www_dot_linkedin_dot_com_learning_data
+Description       | NULL
+-[ RECORD 5 ]-----+-------------------------------------------
+Name              | kineteco
+Owner             | www_dot_linkedin_dot_com_learning
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 8033 kB
+Tablespace        | www_dot_linkedin_dot_com_learning_data
+Description       | NULL
+-[ RECORD 6 ]-----+-------------------------------------------
+Name              | medium_com
+Owner             | medium_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 42 MB
+Tablespace        | medium_com_data
+Description       | NULL
+-[ RECORD 7 ]-----+-------------------------------------------
+Name              | northwind
+Owner             | northwind
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 8990 kB
+Tablespace        | northwind_data
+Description       | NULL
+-[ RECORD 8 ]-----+-------------------------------------------
+Name              | pagila
+Owner             | pagila
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 12 MB
+Tablespace        | pagila_data
+Description       | NULL
+-[ RECORD 9 ]-----+-------------------------------------------
+Name              | pgpedia_info
+Owner             | pgpedia_info
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7902 kB
+Tablespace        | pgpedia_info_data
+Description       | NULL
+-[ RECORD 10 ]----+-------------------------------------------
+Name              | postgres
+Owner             | postgres
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7902 kB
+Tablespace        | pg_default
+Description       | default administrative connection database
+-[ RECORD 11 ]----+-------------------------------------------
+Name              | practice
+Owner             | practice
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7926 kB
+Tablespace        | practice_data
+Description       | NULL
+-[ RECORD 12 ]----+-------------------------------------------
+Name              | template0
+Owner             | postgres
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | =c/postgres                               +
+                  | postgres=CTc/postgres
+Size              | 7902 kB
+Tablespace        | pg_default
+Description       | unmodifiable empty database
+-[ RECORD 13 ]----+-------------------------------------------
+Name              | template1
+Owner             | postgres
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | =c/postgres                               +
+                  | postgres=CTc/postgres
+Size              | 7801 kB
+Tablespace        | pg_default
+Description       | default template for new databases
+-[ RECORD 14 ]----+-------------------------------------------
+Name              | usda
+Owner             | usda
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 11 MB
+Tablespace        | usda_data
+Description       | NULL
+-[ RECORD 15 ]----+-------------------------------------------
+Name              | www_crunchydata_com
+Owner             | www_crunchydata_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7777 kB
+Tablespace        | www_crunchydata_com_data
+Description       | NULL
+-[ RECORD 16 ]----+-------------------------------------------
+Name              | www_cybertec_postgresql_com
+Owner             | www_cybertec_postgresql_com
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_US.UTF-8
+Ctype             | en_US.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7902 kB
+Tablespace        | www_cybertec_postgresql_com_data
+Description       | NULL
+-[ RECORD 17 ]----+-------------------------------------------
+Name              | www_postgresql_org
+Owner             | www_postgresql_org
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+Locale            | NULL
+ICU Rules         | NULL
+Access privileges | NULL
+Size              | 7990 kB
+Tablespace        | www_postgresql_org_data
+Description       | NULL
+
+-[ RECORD 1 ]--+------------------------------------
+oid            | 1
+datname        | template1
+datdba         | 10
+encoding       | 6
+datlocprovider | c
+datistemplate  | t
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 1663
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.41
+datacl         | {=c/postgres,postgres=CTc/postgres}
+-[ RECORD 2 ]--+------------------------------------
+oid            | 4
+datname        | template0
+datdba         | 10
+encoding       | 6
+datlocprovider | c
+datistemplate  | t
+datallowconn   | f
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 1663
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | NULL
+datacl         | {=c/postgres,postgres=CTc/postgres}
+-[ RECORD 3 ]--+------------------------------------
+oid            | 41058
+datname        | colors
+datdba         | 41055
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 41056
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.41
+datacl         | NULL
+-[ RECORD 4 ]--+------------------------------------
+oid            | 41069
+datname        | fruits
+datdba         | 41055
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 41056
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.41
+datacl         | NULL
+-[ RECORD 5 ]--+------------------------------------
+oid            | 49274
+datname        | kineteco
+datdba         | 41055
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 41056
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.41
+datacl         | NULL
+-[ RECORD 6 ]--+------------------------------------
+oid            | 49364
+datname        | northwind
+datdba         | 49361
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 49362
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 7 ]--+------------------------------------
+oid            | 49579
+datname        | usda
+datdba         | 49576
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 49577
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 8 ]--+------------------------------------
+oid            | 49583
+datname        | pagila
+datdba         | 49580
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 49581
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 9 ]--+------------------------------------
+oid            | 49587
+datname        | adventure_works
+datdba         | 49584
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 49585
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 10 ]-+------------------------------------
+oid            | 5
+datname        | postgres
+datdba         | 10
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 1663
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 11 ]-+------------------------------------
+oid            | 49797
+datname        | www_crunchydata_com
+datdba         | 49791
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 49794
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 12 ]-+------------------------------------
+oid            | 49819
+datname        | pgpedia_info
+datdba         | 49813
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 49816
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 13 ]-+------------------------------------
+oid            | 58011
+datname        | practice
+datdba         | 58005
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 58008
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 14 ]-+------------------------------------
+oid            | 58030
+datname        | www_cybertec_postgresql_com
+datdba         | 58024
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 58027
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 15 ]-+------------------------------------
+oid            | 58096
+datname        | databaserookies_wordpress_com
+datdba         | 58090
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 58093
+datcollate     | en_US.UTF-8
+datctype       | en_US.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 16 ]-+------------------------------------
+oid            | 16392
+datname        | medium_com
+datdba         | 16387
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 16390
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+-[ RECORD 17 ]-+------------------------------------
+oid            | 32814
+datname        | www_postgresql_org
+datdba         | 32811
+encoding       | 6
+datlocprovider | c
+datistemplate  | f
+datallowconn   | t
+dathasloginevt | f
+datconnlimit   | -1
+datfrozenxid   | 744
+datminmxid     | 1
+dattablespace  | 32812
+datcollate     | en_IN.UTF-8
+datctype       | en_IN.UTF-8
+datlocale      | NULL
+daticurules    | NULL
+datcollversion | 2.42
+datacl         | NULL
+

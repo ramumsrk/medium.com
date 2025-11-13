@@ -1,0 +1,58 @@
+/******** QUERY *********/
+SELECT USER, CURRENT_USER, SESSION_USER, CURRENT_ROLE, CURRENT_SCHEMA, CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP
+/************************/
+
+    user    | current_user | session_user | current_role | current_schema | current_date |     current_time      |        current_timestamp         
+------------+--------------+--------------+--------------+----------------+--------------+-----------------------+----------------------------------
+ medium_com | medium_com   | medium_com   | medium_com   | medium_com     | 2025-11-13   | 12:07:40.446481+05:30 | 2025-11-13 12:07:40.446481+05:30
+(1 row)
+
+                                                                                                                            List of databases
+             Name              |               Owner               | Encoding | Locale Provider |   Collate   |    Ctype    | Locale | ICU Rules |   Access privileges   |  Size   |               Tablespace               |                Description                 
+-------------------------------+-----------------------------------+----------+-----------------+-------------+-------------+--------+-----------+-----------------------+---------+----------------------------------------+--------------------------------------------
+ adventure_works               | adventure_works                   | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 8102 kB | adventure_works_data                   | NULL
+ colors                        | www_dot_linkedin_dot_com_learning | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | NULL                  | 7841 kB | www_dot_linkedin_dot_com_learning_data | NULL
+ databaserookies_wordpress_com | databaserookies_wordpress_com     | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 7974 kB | databaserookies_wordpress_com_data     | NULL
+ fruits                        | www_dot_linkedin_dot_com_learning | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | NULL                  | 7857 kB | www_dot_linkedin_dot_com_learning_data | NULL
+ kineteco                      | www_dot_linkedin_dot_com_learning | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | NULL                  | 8033 kB | www_dot_linkedin_dot_com_learning_data | NULL
+ medium_com                    | medium_com                        | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | NULL                  | 42 MB   | medium_com_data                        | NULL
+ northwind                     | northwind                         | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 8990 kB | northwind_data                         | NULL
+ pagila                        | pagila                            | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 12 MB   | pagila_data                            | NULL
+ pgpedia_info                  | pgpedia_info                      | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 7902 kB | pgpedia_info_data                      | NULL
+ postgres                      | postgres                          | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | NULL                  | 7902 kB | pg_default                             | default administrative connection database
+ practice                      | practice                          | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 7926 kB | practice_data                          | NULL
+ template0                     | postgres                          | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | =c/postgres          +| 7902 kB | pg_default                             | unmodifiable empty database
+                               |                                   |          |                 |             |             |        |           | postgres=CTc/postgres |         |                                        | 
+ template1                     | postgres                          | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | =c/postgres          +| 7801 kB | pg_default                             | default template for new databases
+                               |                                   |          |                 |             |             |        |           | postgres=CTc/postgres |         |                                        | 
+ usda                          | usda                              | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 11 MB   | usda_data                              | NULL
+ www_crunchydata_com           | www_crunchydata_com               | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 7777 kB | www_crunchydata_com_data               | NULL
+ www_cybertec_postgresql_com   | www_cybertec_postgresql_com       | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 | NULL   | NULL      | NULL                  | 7902 kB | www_cybertec_postgresql_com_data       | NULL
+ www_postgresql_org            | www_postgresql_org                | UTF8     | libc            | en_IN.UTF-8 | en_IN.UTF-8 | NULL   | NULL      | NULL                  | 7990 kB | www_postgresql_org_data                | NULL
+(17 rows)
+
+/******** QUERY *********/
+SELECT * FROM pg_catalog.pg_database
+/************************/
+
+  oid  |            datname            | datdba | encoding | datlocprovider | datistemplate | datallowconn | dathasloginevt | datconnlimit | datfrozenxid | datminmxid | dattablespace | datcollate  |  datctype   | datlocale | daticurules | datcollversion |               datacl                
+-------+-------------------------------+--------+----------+----------------+---------------+--------------+----------------+--------------+--------------+------------+---------------+-------------+-------------+-----------+-------------+----------------+-------------------------------------
+     1 | template1                     |     10 |        6 | c              | t             | t            | f              |           -1 |          744 |          1 |          1663 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.41           | {=c/postgres,postgres=CTc/postgres}
+     4 | template0                     |     10 |        6 | c              | t             | f            | f              |           -1 |          744 |          1 |          1663 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | NULL           | {=c/postgres,postgres=CTc/postgres}
+ 41058 | colors                        |  41055 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         41056 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.41           | NULL
+ 41069 | fruits                        |  41055 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         41056 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.41           | NULL
+ 49274 | kineteco                      |  41055 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         41056 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.41           | NULL
+ 49364 | northwind                     |  49361 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         49362 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 49579 | usda                          |  49576 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         49577 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 49583 | pagila                        |  49580 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         49581 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 49587 | adventure_works               |  49584 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         49585 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+     5 | postgres                      |     10 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |          1663 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 49797 | www_crunchydata_com           |  49791 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         49794 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 49819 | pgpedia_info                  |  49813 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         49816 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 58011 | practice                      |  58005 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         58008 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 58030 | www_cybertec_postgresql_com   |  58024 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         58027 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 58096 | databaserookies_wordpress_com |  58090 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         58093 | en_US.UTF-8 | en_US.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 16392 | medium_com                    |  16387 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         16390 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.42           | NULL
+ 32814 | www_postgresql_org            |  32811 |        6 | c              | f             | t            | f              |           -1 |          744 |          1 |         32812 | en_IN.UTF-8 | en_IN.UTF-8 | NULL      | NULL        | 2.42           | NULL
+(17 rows)
+
