@@ -1,0 +1,177 @@
+      Connection Information
+      Parameter       |   Value    
+----------------------+------------
+ Database             | medium_com
+ Client User          | medium_com
+ Host                 | 127.0.0.1
+ Server Port          | 5432
+ Options              | 
+ Protocol Version     | 3.0
+ Password Used        | true
+ GSSAPI Authenticated | false
+ Backend PID          | 54681
+ SSL Connection       | false
+ Superuser            | off
+ Hot Standby          | off
+(12 rows)
+
+/******** QUERY *********/
+SELECT CURRENT_DATABASE(), USER, CURRENT_USER, SESSION_USER, CURRENT_ROLE, CURRENT_SCHEMA, CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP
+/************************/
+
+ current_database |    user    | current_user | session_user | current_role | current_schema | current_date |     current_time      |        current_timestamp         
+------------------+------------+--------------+--------------+--------------+----------------+--------------+-----------------------+----------------------------------
+ medium_com       | medium_com | medium_com   | medium_com   | medium_com   | medium_com     | 2025-11-17   | 12:35:57.997294+05:30 | 2025-11-17 12:35:57.997294+05:30
+(1 row)
+
+/******** QUERY *********/
+SELECT TXID_CURRENT()
+/************************/
+
+ txid_current 
+--------------
+         1326
+(1 row)
+
+/******** QUERY *********/
+SELECT table_name FROM information_schema.tables WHERE table_schema = 'information_schema' ORDER BY table_name ASC
+/************************/
+
+              table_name               
+---------------------------------------
+ administrable_role_authorizations
+ applicable_roles
+ attributes
+ character_sets
+ check_constraint_routine_usage
+ check_constraints
+ collation_character_set_applicability
+ collations
+ column_column_usage
+ column_domain_usage
+ column_options
+ column_privileges
+ column_udt_usage
+ columns
+ constraint_column_usage
+ constraint_table_usage
+ data_type_privileges
+ domain_constraints
+ domain_udt_usage
+ domains
+ element_types
+ enabled_roles
+ foreign_data_wrapper_options
+ foreign_data_wrappers
+ foreign_server_options
+ foreign_servers
+ foreign_table_options
+ foreign_tables
+ information_schema_catalog_name
+ key_column_usage
+ parameters
+ referential_constraints
+ role_column_grants
+ role_routine_grants
+ role_table_grants
+ role_udt_grants
+ role_usage_grants
+ routine_column_usage
+ routine_privileges
+ routine_routine_usage
+ routine_sequence_usage
+ routine_table_usage
+ routines
+ schemata
+ sequences
+ sql_features
+ sql_implementation_info
+ sql_sizing
+ table_constraints
+ table_privileges
+ tables
+ triggered_update_columns
+ triggers
+ udt_privileges
+ usage_privileges
+ user_defined_types
+ user_mapping_options
+ user_mappings
+ view_column_usage
+ view_routine_usage
+ view_table_usage
+ views
+(62 rows)
+
+                                     List of views
+       Schema       |   Name   | Type |  Owner   | Persistence |  Size   | Description 
+--------------------+----------+------+----------+-------------+---------+-------------
+ information_schema | schemata | view | postgres | permanent   | 0 bytes | NULL
+(1 row)
+
+                                             View "information_schema.schemata"
+            Column             |               Type                | Collation | Nullable | Default | Storage  | Description 
+-------------------------------+-----------------------------------+-----------+----------+---------+----------+-------------
+ catalog_name                  | information_schema.sql_identifier |           |          |         | plain    | 
+ schema_name                   | information_schema.sql_identifier |           |          |         | plain    | 
+ schema_owner                  | information_schema.sql_identifier |           |          |         | plain    | 
+ default_character_set_catalog | information_schema.sql_identifier |           |          |         | plain    | 
+ default_character_set_schema  | information_schema.sql_identifier |           |          |         | plain    | 
+ default_character_set_name    | information_schema.sql_identifier |           |          |         | plain    | 
+ sql_path                      | information_schema.character_data |           |          |         | extended | 
+View definition:
+ SELECT current_database()::information_schema.sql_identifier AS catalog_name,
+    n.nspname::information_schema.sql_identifier AS schema_name,
+    u.rolname::information_schema.sql_identifier AS schema_owner,
+    NULL::name::information_schema.sql_identifier AS default_character_set_catalog,
+    NULL::name::information_schema.sql_identifier AS default_character_set_schema,
+    NULL::name::information_schema.sql_identifier AS default_character_set_name,
+    NULL::character varying::information_schema.character_data AS sql_path
+   FROM pg_namespace n,
+    pg_authid u
+  WHERE n.nspowner = u.oid AND (pg_has_role(n.nspowner, 'USAGE'::text) OR has_schema_privilege(n.oid, 'CREATE, USAGE'::text));
+
+/******** QUERY *********/
+SELECT catalog_name, schema_name, schema_owner FROM information_schema WHERE catalog_name = CURRENT_DATABASE()
+/************************/
+
+/******** QUERY *********/
+SELECT catalog_name, schema_name, schema_owner FROM information_schema.schemata WHERE catalog_name = CURRENT_DATABASE()
+/************************/
+
+/******** QUERY *********/
+END;
+/************************/
+
+ROLLBACK
+/******** QUERY *********/
+SELECT catalog_name, schema_name, schema_owner FROM information_schema.schemata WHERE catalog_name = CURRENT_DATABASE()
+/************************/
+
+ catalog_name |      schema_name      |   schema_owner    
+--------------+-----------------------+-------------------
+ medium_com   | information_schema    | postgres
+ medium_com   | pg_catalog            | postgres
+ medium_com   | public                | pg_database_owner
+ medium_com   | ajaymaurya            | medium_com
+ medium_com   | stormatics_medium_com | medium_com
+ medium_com   | medium_com            | medium_com
+ medium_com   | tomasz_gintowt        | medium_com
+ medium_com   | priyanshu_rajput      | medium_com
+ medium_com   | azlan_jamal           | medium_com
+ medium_com   | thread_whisperer      | medium_com
+ medium_com   | m_ali_khan            | medium_com
+ medium_com   | juan_andrés_leiva     | medium_com
+ medium_com   | itsuki                | medium_com
+ medium_com   | shailesh_kumar_mishra | medium_com
+ medium_com   | neil_ghosh            | medium_com
+ medium_com   | anjuman_bhattacharyya | medium_com
+ medium_com   | dbvisualizer          | medium_com
+ medium_com   | vedant_thakkar        | medium_com
+(18 rows)
+
+/******** QUERY *********/
+END TRANSACTION
+/************************/
+
+COMMIT

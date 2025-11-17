@@ -1,0 +1,40 @@
+         Connection Information
+      Parameter       |      Value      
+----------------------+-----------------
+ Database             | medium_com
+ Client User          | postgres
+ Socket Directory     | /run/postgresql
+ Server Port          | 5432
+ Options              | 
+ Protocol Version     | 3.0
+ Password Used        | false
+ GSSAPI Authenticated | false
+ Backend PID          | 54540
+ SSL Connection       | false
+ Superuser            | on
+ Hot Standby          | off
+(12 rows)
+
+/******** QUERY *********/
+SELECT CURRENT_DATABASE(), USER, CURRENT_USER, SESSION_USER, CURRENT_ROLE, CURRENT_SCHEMA, CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP
+/************************/
+
+ current_database |   user   | current_user | session_user | current_role | current_schema | current_date |     current_time     |        current_timestamp        
+------------------+----------+--------------+--------------+--------------+----------------+--------------+----------------------+---------------------------------
+ medium_com       | postgres | postgres     | postgres     | postgres     | public         | 2025-11-17   | 12:37:17.61492+05:30 | 2025-11-17 12:37:17.61492+05:30
+(1 row)
+
+/******** QUERY *********/
+SELECT TXID_CURRENT()
+/************************/
+
+ txid_current 
+--------------
+         1325
+(1 row)
+
+/******** QUERY *********/
+END WORK
+/************************/
+
+COMMIT

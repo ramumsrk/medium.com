@@ -88,9 +88,10 @@
 
 # T
 
-## [Tomasz Gintowt](https://tomasz-gintowt.medium.com/)
+## [Tomasz Gintowt](./Tomasz-Gintowt/)
 
-* [PostgreSQL pg_stat_progress_* views](https://tomasz-gintowt.medium.com/postgresql-pg-stat-progress-6041b951663f)
+* [PostgreSQL ````information_schema```` (With Practical Examples)](./Tomasz-Gintowt/PostgreSQL-information_schema-With-Practical-Examples/)
+* [PostgreSQL pg_stat_progress_* views](./Tomasz-Gintowt/PostgreSQL_pg_stat_progress_asterisk_views/)
 
 ## [The Table — Databases and SQL](https://medium.com/the-table-sql-and-devtalk)
 
